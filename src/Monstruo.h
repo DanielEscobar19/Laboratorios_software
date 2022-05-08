@@ -5,18 +5,24 @@
 #include <string>
 using namespace std;
 
+#define DANYO_OMISION 5
+
 class Monstruo: public Agente {
     protected:
         int id;
         bool atrapado = false;
         MM * manada = nullptr;
-        string pertenencia();
+        virtual string pertenencia();
 
     public:
         Monstruo(int id = 0, MM * manada = nullptr);
         int atacar(Agente * agente);
-        string toString();
-        void setManada(MM * manada);
-        void unsetManada(MM * manada);
+        virtual string toString() = 0;  // modificado
+        virtual void setManada(MM * manada);
+        virtual void unsetManada();
+
+        void setAtrapado();
+        int getCurrentID();
+
 };
 #endif  // MONSTRUO_H
