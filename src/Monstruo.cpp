@@ -1,12 +1,10 @@
-#include "Monstruo.h"  /* Agente / MM / string */
+#include "Monstruo.h"  /* MM / string */
 
 using namespace std;
 
-// Public methods =================================
-Monstruo::Monstruo(int id = 0, MM * manada = nullptr) { }
-
 int Monstruo::atacar(Agente * agente) {  // default
     agente->setVida(agente->getVida() - DANYO_OMISION);
+    return DANYO_OMISION;
 }
 
 void Monstruo::setManada(MM * manada) {
@@ -26,11 +24,9 @@ void Monstruo::setAtrapado() {
     this->atrapado = true;
 }
 
-int Monstruo::getCurrentID() {
-    return this->id;
+int Monstruo::getDanyo() {
+    return this->danyo;
 }
-
-// Protected methods =================================
 string Monstruo::pertenencia() {
     string tipo = string(typeid(*this).name());
     tipo = tipo.substr(1,tipo.length());

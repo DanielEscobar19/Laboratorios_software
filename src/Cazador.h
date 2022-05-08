@@ -13,7 +13,6 @@ public:
 
 private:
   int monstruosCazados;
-
 };
 
 #endif // CAZADOR_H

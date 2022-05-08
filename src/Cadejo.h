@@ -4,7 +4,6 @@
 #include "Monstruo.h"
 using namespace std;
 
-#define DANYO 10
 
 class Cadejo: public Monstruo {
     public:

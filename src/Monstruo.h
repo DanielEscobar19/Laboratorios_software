@@ -1,28 +1,28 @@
 #ifndef MONSTRUO_H
 #define MONSTRUO_H
-#include "Agente.h"
+
+#include "Monstruos.h"
 #include "MM.h"
+
 #include <string>
 using namespace std;
 
 #define DANYO_OMISION 5
 
-class Monstruo: public Agente {
+// class MM;
+class Monstruo: public Monstruos {
     protected:
-        int id;
-        bool atrapado = false;
         MM * manada = nullptr;
-        virtual string pertenencia();
+        int danyo;
 
     public:
-        Monstruo(int id = 0, MM * manada = nullptr);
-        int atacar(Agente * agente);
-        virtual string toString() = 0;  // modificado
-        virtual void setManada(MM * manada);
-        virtual void unsetManada();
+        virtual int atacar(Agente * agente);
+        virtual string toString() = 0;
+        void setManada(MM * manada);
+        void unsetManada();
 
+        string pertenencia();
         void setAtrapado();
-        int getCurrentID();
-
+        int getDanyo();
 };
 #endif  // MONSTRUO_H

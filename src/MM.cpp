@@ -1,16 +1,19 @@
 #include "MM.h"
-MM::MM(int id = 0):Monstruo(id, nullptr) {}
+#include "Monstruo.h"
+
+MM::MM(int id) {
+    this->id = id;
+}
 
 bool MM::verificarTipo(Monstruo * monstruo) {
     // retorna true si el monstruo es del mismo tipo que la manada
     // falso en caso contrario
-    try{
+    if (!this->miembros.empty()) {
         return typeid(*this->miembros[0]) == typeid(*monstruo);
-    } catch(...) {
-        // caso del que el vector este vacio
-        // devolvemos true porque si se peude agregar el minstruo al arreglo
-        return true;
     }
+    // caso del que el vector este vacio
+    // devolvemos true porque si se peude agregar el minstruo al arreglo
+    return true;
 }
 
 void MM::agregarMiembro(Monstruo * monstruo) {
@@ -20,23 +23,48 @@ void MM::agregarMiembro(Monstruo * monstruo) {
 }
 
 void MM::quitarMiembro(Monstruo * monstruo) {
-    int i = 0;
-    while (this->miembros[i++] != monstruo) {}
-    this->miembros.erase(this->miembros.begin() + i);
-}
-
-int MM::atacar(Agente * agente) {
-    for (int i = 0; i < this->miembros.size(); ++i) {
-        this->miembros[i]->atacar(agente);
+    if (!this->miembros.empty()) {
+        int i = 0;
+        while (this->miembros[i++] != monstruo) {}
+        this->miembros.erase(this->miembros.begin() + i);
     }
 }
 
-string MM::toString() {
-    try {
-        cout << "Manada compuesta de " << this->miembros.size() << " monstruos de tipo: " \
-            << typeid(*this->miembros[0]).name() << endl;
-    } catch (...) {
-        cout << "La manada no tiene tipo" << endl;
+int MM::atacar(Agente * agente) {
+    int sum = 0;
+    if (!this->miembros.empty()) {
+        for (int i = 0; i < this->miembros.size(); ++i) {
+            sum += this->miembros[i]->getDanyo();
+            this->miembros[i]->atacar(agente);
+        }
 
+    }
+    return sum;
+}
+
+string MM::toString() {
+
+    string respuesta = "Manada {" + std::to_string(this->getCurrentID()) + "}"; 
+
+    string contenido = " compuesta de " + std::to_string(this->miembros.size()) + " monstruos de tipo " + this->miembros[0]->pertenencia() + "\n";
+    
+    respuesta += (this->miembros.empty()) ? " vacia" : contenido;
+
+    return respuesta;
+}
+
+
+string MM::pertenencia() {
+    if (!this->miembros.empty()) {
+        return string("Manada de tipo ") + this->miembros[0]->pertenencia();
+    }
+    return "Manada vacía";
+}
+
+void MM::setAtrapado() {
+    if (!this->miembros.empty()) {
+        for (int i = 0; i < this->miembros.size(); ++i) {
+            this->miembros[i]->setAtrapado();
+        }
     }
 }

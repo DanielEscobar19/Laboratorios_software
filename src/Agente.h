@@ -8,7 +8,7 @@ public:
   Agente(int vida = 0, Nodo * nodo = nullptr);
   void moverse(Nodo * nuevaPosicion);
   int getVida();
-  int setVida(int vida);
+  void setVida(int vida);
 
 protected:
   int vida;

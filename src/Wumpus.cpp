@@ -1,11 +1,16 @@
 #include "Wumpus.h"
 
-Wumpus::Wumpus(int id = 0, MM * manada = nullptr):Monstruo(id, manada) {}
-
+Wumpus::Wumpus(int id, MM * manada) {
+    this->id = id;
+    this->manada = manada;
+    this->danyo = 15;
+}
 
 int Wumpus::atacar(Agente * agente) {
-    agente->setVida(agente->getVida() - DANYO_WUMPUS);
+    agente->setVida(agente->getVida() - this->danyo);
+    return this->danyo;
 }
+
 
 string Wumpus::toString(){
     // id + tipo

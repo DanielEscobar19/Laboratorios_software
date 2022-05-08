@@ -3,13 +3,16 @@
 #include <time.h>
 
 Cazador::Cazador(){
-  vida = 100;
+  this->vida = 100;
 }
 void Cazador::atraparMonstruo(Monstruo * monstruo){
   srand (time(NULL));
-  monstruo->setAtrapado((rand() % 2) == 2);
+  if ((rand() % 2) == 2) {
+    monstruo->setAtrapado();
+    ++this->monstruosCazados;
+  }
 }
 
 bool Cazador::estaMuerto(){
-  return vida < 1;
+  return this->vida < 1;
 }

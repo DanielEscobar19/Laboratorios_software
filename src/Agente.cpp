@@ -1,8 +1,8 @@
 #include "Agente.h"
 
-Agente::Agente(int vida = 0, Nodo * nodo = nullptr){
+Agente::Agente(int vida, Nodo * nodo){
   this->vida = vida;
-  this->nodo = nodo;
+  this->nodoActual = nodo;
 }
 
 void Agente::moverse(Nodo * nuevaPosicion){
@@ -13,6 +13,6 @@ int Agente::getVida(){
   return vida;
 }
 
-int setVida(int vida){
+void Agente::setVida(int vida){
   this->vida = vida;
 }

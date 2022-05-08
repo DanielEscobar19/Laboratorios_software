@@ -1,15 +1,16 @@
 #ifndef MM_H
 #define MM_H
+
 #include <vector>
 #include <typeinfo>
 #include <iostream>
-#include "Monstruo.h"
-#include "Agente.h"
 
+#include "Monstruos.h" /* Agente */
 
 using namespace std;
 
-class MM: public Monstruo {
+class Monstruo;
+class MM: public Monstruos {
     private:
         vector<Monstruo * > miembros;
         bool verificarTipo(Monstruo * monstruo);
@@ -20,6 +21,9 @@ class MM: public Monstruo {
         void quitarMiembro(Monstruo * monstruo);
         int atacar(Agente * agente);
         string toString();
+
+        string pertenencia();
+        void setAtrapado();;
 
 };
 #endif  // MM_H
