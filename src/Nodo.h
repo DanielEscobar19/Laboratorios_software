@@ -1,17 +1,13 @@
 #ifndef NODO_H
 #define NODO_H
 
+class Nodo{
+  public:
+    void setVisitantes(int cantidad);
+    int getVisitantes();
 
-class Nodo {
-    private:
-        int x = 0;
-        int y = 0;
-    public:
-        Nodo(int x = 0, int y = 0);
-        void setX(int x);
-        void setY(int y);
-        int getY();
-        int getX();
+  protected:
+    int visitantes;
 };
 
 #endif // NODO_H

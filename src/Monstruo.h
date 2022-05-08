@@ -11,6 +11,7 @@ class Monstruo: public Agente {
         bool atrapado = false;
         MM * manada = nullptr;
         string pertenencia();
+        void setAtrapado(bool capturado);
 
     public:
         Monstruo(int id = 0, MM * manada = nullptr);

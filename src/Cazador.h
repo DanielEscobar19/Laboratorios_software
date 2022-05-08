@@ -1,11 +1,13 @@
 #ifndef CAZADOR_H
 #define CAZADOR_H
 
-class Agente;
+#include "Agente.h"
+#include "Monstruo.h"
 
 class Cazador : public Agente
 {
 public:
+  Cazador();
   void atraparMonstruo(Monstruo * monstruo);
   bool estaMuerto();
 
