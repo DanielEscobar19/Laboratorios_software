@@ -1,14 +1,15 @@
 #include "Cazador.h"
+#include <stdlib.h>
+#include <time.h>
 
-#include "Agente.h"
-
-void Cazador::atraparMonstruo(Monstruo * monstruo)
-{
-	// implementation...
+Cazador::Cazador(){
+  vida = 100;
+}
+void Cazador::atraparMonstruo(Monstruo * monstruo){
+  srand (time(NULL));
+  monstruo->setAtrapado((rand() % 2) == 2);
 }
 
-bool Cazador::estaMuerto()
-{
-	// implementation...
+bool Cazador::estaMuerto(){
+  return vida < 1;
 }
-

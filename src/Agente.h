@@ -1,13 +1,13 @@
 #ifndef AGENTE_H
 #define AGENTE_H
+
 #include "Nodo.h"
 
-class Agente
-{
+class Agente{
 public:
   Agente(int vida = 0, Nodo * nodo = nullptr);
   void moverse(Nodo * nuevaPosicion);
-  const int getVida();
+  int getVida();
   int setVida(int vida);
 
 protected:
