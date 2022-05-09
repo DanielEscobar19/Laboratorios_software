@@ -6,11 +6,9 @@ Cazador::Cazador(){
   this->vida = 100;
 }
 void Cazador::atraparMonstruo(Monstruo * monstruo){
-  srand (time(NULL));
-  if ((rand() % 2) == 2) {
-    monstruo->setAtrapado();
-    ++this->monstruosCazados;
-  }
+  monstruo->setAtrapado();
+  ++this->monstruosCazados;
+  cout << "Cazador atrapando " << monstruo->pertenencia() <<  " {" << monstruo->getCurrentID() << "}" << endl;
 }
 
 bool Cazador::estaMuerto(){

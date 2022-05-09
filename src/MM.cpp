@@ -25,7 +25,14 @@ void MM::agregarMiembro(Monstruo * monstruo) {
 void MM::quitarMiembro(Monstruo * monstruo) {
     if (!this->miembros.empty()) {
         int i = 0;
-        while (this->miembros[i++] != monstruo) {}
+        while (this->miembros[i] != monstruo) {
+            i++;
+        }
+        
+        monstruo->nullManada();
+
+        this->miembros[i] = nullptr;
+        this->miembros.shrink_to_fit();
         this->miembros.erase(this->miembros.begin() + i);
     }
 }

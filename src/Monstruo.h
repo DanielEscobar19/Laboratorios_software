@@ -24,5 +24,6 @@ class Monstruo: public Monstruos {
         string pertenencia();
         void setAtrapado();
         int getDanyo();
+        void nullManada();
 };
 #endif  // MONSTRUO_H

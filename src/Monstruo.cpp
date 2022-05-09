@@ -14,6 +14,10 @@ void Monstruo::setManada(MM * manada) {
     this->manada->agregarMiembro(this);
 }
 
+void Monstruo::nullManada() {
+    this->manada = nullptr;
+}
+
 void Monstruo::unsetManada() {
     if (this->manada) 
         this->manada->quitarMiembro(this);
@@ -22,6 +26,8 @@ void Monstruo::unsetManada() {
 
 void Monstruo::setAtrapado() {
     this->atrapado = true;
+    this->unsetManada();
+    // cout << "setAtrapado: " << this->toString() << endl;
 }
 
 int Monstruo::getDanyo() {

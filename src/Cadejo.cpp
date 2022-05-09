@@ -16,7 +16,7 @@ string Cadejo::toString(){
     // id + tipo
     string respuesta = "Cadejo {" + std::to_string(this->getCurrentID()) + "}"; 
     // atrapado
-    respuesta += (this->atrapado) ? " , ya fue atrapado" : " , sigue libre";
+    respuesta += (this->atrapado) ? " ya fue atrapado" : " sigue libre";
     // manada
     respuesta += (this->manada) ? 
     " y pertenece a la manada " + std::to_string(this->manada->getCurrentID())
