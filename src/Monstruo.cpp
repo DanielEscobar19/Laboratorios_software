@@ -21,9 +21,14 @@ void Monstruo::nullManada() {
     this->manada = nullptr;
 }
 
+void Monstruo::setPtrManada(MM * manada) {
+    this->manada = manada;
+}
+
 void Monstruo::unsetManada() {
-    if (this->manada) 
+    if (this->manada) {
         this->manada->quitarMiembro(this);
+    }
     this->manada = nullptr;
 }
 

@@ -11,6 +11,7 @@ public:
   void atraparMonstruo(Monstruos * monstruos);
   bool estaMuerto();
   string toString();
+  int getMonstruosCazados();
 
 private:
   int monstruosCazados;

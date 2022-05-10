@@ -25,5 +25,6 @@ class Monstruo: public Monstruos {
         void setAtrapado();
         int getDanyo();
         void nullManada();
+        void setPtrManada(MM * manada);
 };
 #endif  // MONSTRUO_H

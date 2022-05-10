@@ -19,6 +19,7 @@ bool MM::verificarTipo(Monstruo * monstruo) {
 void MM::agregarMiembro(Monstruo * monstruo) {
     if (this->verificarTipo(monstruo)) {
         this->miembros.push_back(monstruo);
+        monstruo->setPtrManada(this);
     }
 }
 
@@ -31,9 +32,11 @@ void MM::quitarMiembro(Monstruo * monstruo) {
         
         monstruo->nullManada();
 
+        // cout << this->miembros[0]->toString();
         this->miembros[i] = nullptr;
         this->miembros.shrink_to_fit();
         this->miembros.erase(this->miembros.begin() + i);
+
     }
 }
 
@@ -56,7 +59,8 @@ string MM::toString() {
       return respuesta + " vacia";
     }
     respuesta += " compuesta de " + std::to_string(this->miembros.size()) + " monstruos de tipo " + this->miembros[0]->pertenencia();
-  
+    
+
     return respuesta;
 }
 
