@@ -4,6 +4,7 @@
 
 Cazador::Cazador(){
   this->vida = 100;
+  this->monstruosCazados = 0;
 }
 void Cazador::atraparMonstruo(Monstruos * monstruos){
   monstruos->setAtrapado();
@@ -21,4 +22,8 @@ string Cazador::toString() {
   respuesta += (this->estaMuerto()) ? "muerto " : "vivo ";
   respuesta += "con " + to_string(this->vida) + " de vida";
   return respuesta;
+}
+
+int Cazador::getMonstruosCazados() {
+  return this->monstruosCazados;
 }
