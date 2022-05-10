@@ -8,10 +8,13 @@ int Monstruo::atacar(Agente * agente) {  // default
 }
 
 void Monstruo::setManada(MM * manada) {
-    // verifica que existe el ptr e invoca a quitarMiembro de la clase MM.
-    this->unsetManada();
-    this->manada = manada;
-    this->manada->agregarMiembro(this);
+  // verifica que existe el ptr e invoca a quitarMiembro de la clase MM.
+  if(this->manada != NULL){
+    this->manada->quitarMiembro(this);
+  }
+  this->unsetManada();
+  this->manada = manada;
+  this->manada->agregarMiembro(this);
 }
 
 void Monstruo::nullManada() {

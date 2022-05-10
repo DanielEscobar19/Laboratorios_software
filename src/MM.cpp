@@ -52,11 +52,11 @@ int MM::atacar(Agente * agente) {
 string MM::toString() {
 
     string respuesta = "Manada {" + std::to_string(this->getCurrentID()) + "}"; 
-
-    string contenido = " compuesta de " + std::to_string(this->miembros.size()) + " monstruos de tipo " + this->miembros[0]->pertenencia() + "\n";
-    
-    respuesta += (this->miembros.empty()) ? " vacia" : contenido;
-
+    if(this->miembros.empty()){
+      return respuesta + " vacia";
+    }
+    respuesta += " compuesta de " + std::to_string(this->miembros.size()) + " monstruos de tipo " + this->miembros[0]->pertenencia();
+  
     return respuesta;
 }
 
@@ -70,7 +70,7 @@ string MM::pertenencia() {
 
 void MM::setAtrapado() {
     if (!this->miembros.empty()) {
-        for (int i = 0; i < this->miembros.size(); ++i) {
+        for (int i = this->miembros.size()-1; i > -1; --i) {
             this->miembros[i]->setAtrapado();
         }
     }

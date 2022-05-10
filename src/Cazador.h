@@ -8,8 +8,9 @@ class Cazador : public Agente
 {
 public:
   Cazador();
-  void atraparMonstruo(Monstruo * monstruo);
+  void atraparMonstruo(Monstruos * monstruos);
   bool estaMuerto();
+  string toString();
 
 private:
   int monstruosCazados;
