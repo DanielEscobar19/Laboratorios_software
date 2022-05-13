@@ -13,6 +13,7 @@ class Monstruos: public Agente {
         bool atrapado = false;
 
     public:
+        // se eliminarion los virtuales puros
         virtual int atacar(Agente * agente);
         virtual string toString();
 
