@@ -8,6 +8,9 @@ Autores: Fabián Orozco Chaves - Daniel Escobar Giraldo - Manuel Arroyo.
 #include "MM.h"
 #include "Cazador.h"
 
+// #include "MonstruoReplicable_E.h"
+#include "MonstruoReplicable_D.h"
+
 #include <iostream>
 using namespace std;
 
@@ -121,10 +124,45 @@ void run() {
 
 }
 
+void runLab2_E() {
+  // cout << "\nEjecutando solucion estatica" << endl;
+  int ids = 0;
+
+  cout << endl << "Creación de 3 Wumpus:" << endl;
+  Wumpus wumpus1(++ids);
+  cout << wumpus1.toString() << endl;
+  Wumpus wumpus2(++ids);
+  cout << wumpus2.toString() << endl; 
+  Wumpus wumpus3(++ids);
+  cout << wumpus3.toString() << endl;
+  
+  cout << endl << "Creación manada de Wumpus y se agregan los Wumpus a la manada:" << endl;
+  MM manadaWumpus(++ids);
+  wumpus1.setManada(&manadaWumpus);
+  wumpus2.setManada(&manadaWumpus);
+  wumpus3.setManada(&manadaWumpus);
+  cout << manadaWumpus.toString() << endl;
+  
+  cout << endl << "Wumpus 1 invisible" << endl;
+
+  cout << endl << "Wumpus 2 replicable" << endl;
+  // MonstruoReplicable_D wumpusReplicable1 {wumpus2, true, 5};
+  // cout << wumpusReplicable1.toString() << endl;
+  cout << endl << "Wumpus 3 con memoria" << endl;
+
+}
+
+void runLab2_D() {
+  // cout << "Ejecutando solucion Dinamica" << endl;
+  Wumpus wumpus1;
+}
+
 int main() {
   cout << "\n    | Start |" << endl;
 
-  run();
-  
+  // run();
+  runLab2_E();
+  // runLab2_D();
+
   cout << "\n   | End |" << endl;
 }
