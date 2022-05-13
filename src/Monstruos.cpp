@@ -10,3 +10,15 @@ string Monstruos::pertenencia() {
     tipo = tipo.substr(1,tipo.length());
     return tipo;
 }
+
+int Monstruos::atacar(Agente * agente) {
+    return 0;
+}
+
+string  Monstruos::toString() {
+    return string("");
+}
+
+void  Monstruos::setAtrapado() {
+    this->atrapado = true;
+}
