@@ -13,11 +13,11 @@ class Monstruos: public Agente {
         bool atrapado = false;
 
     public:
-        virtual int atacar(Agente * agente) = 0;
-        virtual string toString() = 0;
+        virtual int atacar(Agente * agente);
+        virtual string toString();
 
         virtual string pertenencia();
-        virtual void setAtrapado() = 0;
+        virtual void setAtrapado();
         int getCurrentID();
 
 };
