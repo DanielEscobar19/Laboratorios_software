@@ -20,7 +20,7 @@ string Wumpus::toString(){
     // manada
     respuesta += (this->manada) ? 
     " y pertenece a la manada " + std::to_string(this->manada->getCurrentID())
-    : " y no tiene manada";
+    : " y no tiene manada.";
 
     return respuesta;
 }

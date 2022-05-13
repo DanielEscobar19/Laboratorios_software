@@ -6,10 +6,10 @@
 using namespace std;
 class MonstruoInvisible_D: public Monstruos {
  private:
-    // Monstruos & monstruos;
+    Monstruos & monstruos;
     bool invisibilidad = false;
  public:
-    MonstruoInvisible_D( bool invisibilidad);
+    MonstruoInvisible_D(Monstruos & monstruos, bool invisibilidad);
     ~MonstruoInvisible_D();
     string toString();
     void activarInvisibilidad();
