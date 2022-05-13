@@ -222,6 +222,8 @@
   <object id="zMYHA2qIuk2buQbsPu9A9w" type="umloperation.uml"/>
   <object id="zR01GNEu2UiyeAe5pkoHpw" type="rectshape.core"/>
   <object id="GiTC0DKwkEGju44BvrxDNw" type="rectshapeview.core"/>
+  <object id="hMDfB5zenEaqmVDSoHU73w" type="umlattribute.uml"/>
+  <object id="y3+zvFM6zkKIq7Nkee/USA" type="umlparameter.uml"/>
  </objects>
  <relations>
   <relation from="ViTTKs64lEWfStj1n97eeg" id="0ONS/bgew0GzxAUQelDjHQ" to="fD72c3tlGkOop1R+UxMABQ" type="umlgeneralization.model.model.uml"/>
@@ -513,6 +515,8 @@
   <reference from="ksvNhQOJ1Ui/W1xGQYlD6A" to="zR01GNEu2UiyeAe5pkoHpw" type="owner.models.package.model.core"/>
   <reference from="zR01GNEu2UiyeAe5pkoHpw" to="GiTC0DKwkEGju44BvrxDNw" type="model.views.rectshape.rectshapeview.core"/>
   <reference from="bkThj7sEekODRsHdZGg95g" to="GiTC0DKwkEGju44BvrxDNw" type="diagram.nodes.diagramview.rectshapeview.core"/>
+  <reference from="MxqH25qm/kiZeE8rhgrjIw" to="hMDfB5zenEaqmVDSoHU73w" type="classifier.attributes.umlclassifier.umlattribute.uml"/>
+  <reference from="mQieK+TSY0mDLdImuLHjpA" to="y3+zvFM6zkKIq7Nkee/USA" type="operation.parameters.umloperation.umlparameter.uml"/>
  </references>
  <object-values>
   <value-owner id="G3pmH01C6U2yDXFq4cT9Vg">
@@ -604,7 +608,7 @@
    <value name="bounds">549,835,192,118</value>
   </value-owner>
   <value-owner id="nXuifHN4k0CR5unYu9/Scg">
-   <value name="rendering">{&quot;bounds&quot;: &quot;579,254,229,198&quot;,&quot;model&quot;: &quot;fD72c3tlGkOop1R+UxMABQ&quot;,&quot;name&quot;: &quot;Monstruos&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;579,254,229,198&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;589,259,209,16&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL abstracto, interfaz común&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;659,275,70,16&quot;,&quot;fontStyle&quot;: &quot;3&quot;,&quot;text&quot;: &quot;Monstruos&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;579,296,229,38&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;584,299,42,16&quot;,&quot;text&quot;: &quot;#id: int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,315,137,16&quot;,&quot;text&quot;: &quot;#atrapado: bool = false&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;579,334,229,118&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;584,337,179,16&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente *): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,353,127,16&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+pertenencia(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,369,105,16&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,385,121,16&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,401,114,16&quot;,&quot;text&quot;: &quot;+getCurrentID(): int&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
+   <value name="rendering">{&quot;bounds&quot;: &quot;579,254,229,198&quot;,&quot;model&quot;: &quot;fD72c3tlGkOop1R+UxMABQ&quot;,&quot;name&quot;: &quot;Monstruos&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;579,254,229,198&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;589,259,209,16&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL abstracto, interfaz común&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;659,275,70,16&quot;,&quot;fontStyle&quot;: &quot;3&quot;,&quot;text&quot;: &quot;Monstruos&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;579,296,229,38&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;584,299,42,16&quot;,&quot;text&quot;: &quot;#id: int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,315,137,16&quot;,&quot;text&quot;: &quot;#atrapado: bool = false&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;579,334,229,118&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;584,337,177,16&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente *): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,353,126,16&quot;,&quot;text&quot;: &quot;+pertenencia(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,369,104,16&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,385,119,16&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;584,401,114,16&quot;,&quot;text&quot;: &quot;+getCurrentID(): int&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
    <value name="bounds">579,254,229,198</value>
   </value-owner>
   <value-owner id="gsNuqjXrEUmT4ZKmBaUwJA">
@@ -620,7 +624,7 @@
    <value name="order">6</value>
   </value-owner>
   <value-owner id="eNsx/FT9qEq1/1gamJ/NIQ">
-   <value name="rendering">{&quot;bounds&quot;: &quot;331,77,400,123&quot;,&quot;model&quot;: &quot;K8nUZdcmUEm2auCG4odAnA&quot;,&quot;name&quot;: &quot;Main&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;331,77,400,123&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;516,82,30,16&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;Main&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;331,103,400,11&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;331,114,400,86&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;336,117,37,16&quot;,&quot;text&quot;: &quot;+run()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,133,390,16&quot;,&quot;text&quot;: &quot;+juegoTerminado(monstruosCreados: int, cazador: Cazador*): bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,149,122,16&quot;,&quot;text&quot;: &quot;+administrarTurnos()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,165,64,16&quot;,&quot;text&quot;: &quot;+runLab2()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,181,222,16&quot;,&quot;text&quot;: &quot;+declararGanador(cazador: Cazador*)&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
+   <value name="rendering">{&quot;bounds&quot;: &quot;331,77,400,123&quot;,&quot;model&quot;: &quot;K8nUZdcmUEm2auCG4odAnA&quot;,&quot;name&quot;: &quot;Main&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;331,77,400,123&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;516,82,30,16&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;Main&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;331,103,400,11&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;331,114,400,86&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;336,117,78,16&quot;,&quot;text&quot;: &quot;+runLab2_E()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,133,79,16&quot;,&quot;text&quot;: &quot;+runLab2_D()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,149,390,16&quot;,&quot;text&quot;: &quot;+juegoTerminado(monstruosCreados: int, cazador: Cazador*): bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,165,122,16&quot;,&quot;text&quot;: &quot;+administrarTurnos()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;336,181,222,16&quot;,&quot;text&quot;: &quot;+declararGanador(cazador: Cazador*)&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
    <value name="bounds">331,77,400,123</value>
   </value-owner>
   <value-owner id="SMBn3+kzy0etj7N2fIxOEw">
@@ -685,7 +689,6 @@
   <value-owner id="HtYCOIHwfUaZX/8vUHxRjg">
    <value name="name">atacar</value>
    <value name="order">3</value>
-   <value name="isAbstract">true</value>
    <value name="returnType">int</value>
   </value-owner>
   <value-owner id="lmG7mPZLc0yAkFM86FpxJQ">
@@ -762,7 +765,6 @@
   <value-owner id="hyFiA86e802BkGuCGs+d9Q">
    <value name="name">pertenencia</value>
    <value name="order">6</value>
-   <value name="isAbstract">true</value>
    <value name="returnType">string</value>
   </value-owner>
   <value-owner id="3mb8sqBVgEeYzdovb1Qi/A">
@@ -779,7 +781,6 @@
   <value-owner id="1DqA/SYFdUyq56tmurS3Kg">
    <value name="name">toString</value>
    <value name="order">7</value>
-   <value name="isAbstract">true</value>
    <value name="returnType">string</value>
   </value-owner>
   <value-owner id="ZjEv3tUg+UmaRO4BURPCrA">
@@ -1284,7 +1285,6 @@
   <value-owner id="NlaUZpDfv0yrXvbY64VZyA">
    <value name="name">setAtrapado</value>
    <value name="order">7</value>
-   <value name="isAbstract">true</value>
    <value name="returnType">void</value>
   </value-owner>
   <value-owner id="z7/Jp5zzy02ZNcramoGoiw">
@@ -1387,8 +1387,7 @@
    <value name="returnType">void</value>
   </value-owner>
   <value-owner id="/JfnSRPoPkWr7wXpgddgAA">
-   <value name="name">run</value>
-   <value name="order">2</value>
+   <value name="name">runLab2_E</value>
   </value-owner>
   <value-owner id="G7wC2ltyT0SCCM+A+F7DkA">
    <value name="name">getVida</value>
@@ -1602,12 +1601,12 @@
   </value-owner>
   <value-owner id="lI3rbprPz0ynP/5JpE2f5A">
    <value name="name">juegoTerminado</value>
-   <value name="order">3</value>
+   <value name="order">2</value>
    <value name="returnType">bool</value>
   </value-owner>
   <value-owner id="DHxXZkN8SkmbcIYej0mXWw">
    <value name="name">administrarTurnos</value>
-   <value name="order">4</value>
+   <value name="order">3</value>
   </value-owner>
   <value-owner id="kHzsTZ5smEKY5FQc6D5BDg">
    <value name="name">monstruosCreados</value>
@@ -1621,7 +1620,7 @@
   </value-owner>
   <value-owner id="j/I6Ded13kKoqISOJOu4YQ">
    <value name="name">declararGanador</value>
-   <value name="order">9</value>
+   <value name="order">4</value>
   </value-owner>
   <value-owner id="e5AB2NIkIUKpj19T1zLhHA">
    <value name="name">cazador</value>
@@ -1705,8 +1704,8 @@
    <value name="order">12</value>
   </value-owner>
   <value-owner id="XKhV8bliI0qiO8ytm8evQw">
-   <value name="rendering">{&quot;bounds&quot;: &quot;1352,391,372,185&quot;,&quot;model&quot;: &quot;MxqH25qm/kiZeE8rhgrjIw&quot;,&quot;name&quot;: &quot;MonstruoReplicable&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;1706,391,18,22&quot;,&quot;lineStyle&quot;: &quot;2&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1711,394,8,16&quot;,&quot;text&quot;: &quot;T&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,410,357,166&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1470,415,121,16&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL decorador&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1467,431,127,16&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;MonstruoReplicable&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,452,357,38&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1357,455,142,16&quot;,&quot;text&quot;: &quot;-monstruos: Monstruos&amp;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,471,93,16&quot;,&quot;text&quot;: &quot;-replicable: bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,490,357,86&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1357,493,347,16&quot;,&quot;text&quot;: &quot;+MonstruoReplicable(monstruos&amp; Monstruos, qtyCopias: int)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,509,138,16&quot;,&quot;text&quot;: &quot;+~MonstruoReplicable()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,525,104,16&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,541,186,16&quot;,&quot;text&quot;: &quot;+desactivarReplicabilidad(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,557,166,16&quot;,&quot;text&quot;: &quot;+activarReplicabilidad(): void&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
-   <value name="bounds">1352,391,372,185</value>
+   <value name="rendering">{&quot;bounds&quot;: &quot;1352,381,372,201&quot;,&quot;model&quot;: &quot;MxqH25qm/kiZeE8rhgrjIw&quot;,&quot;name&quot;: &quot;MonstruoReplicable&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;1706,381,18,22&quot;,&quot;lineStyle&quot;: &quot;2&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1711,384,8,16&quot;,&quot;text&quot;: &quot;T&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,400,357,182&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1470,405,121,16&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL decorador&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1467,421,127,16&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;MonstruoReplicable&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,442,357,54&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1357,445,142,16&quot;,&quot;text&quot;: &quot;-monstruos: Monstruos&amp;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,461,93,16&quot;,&quot;text&quot;: &quot;-replicable: bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,477,67,16&quot;,&quot;text&quot;: &quot;+copias: int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1352,496,357,86&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1357,499,347,16&quot;,&quot;text&quot;: &quot;+MonstruoReplicable(monstruos&amp; Monstruos, qtyCopias: int)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,515,138,16&quot;,&quot;text&quot;: &quot;+~MonstruoReplicable()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,531,104,16&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,547,186,16&quot;,&quot;text&quot;: &quot;+desactivarReplicabilidad(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1357,563,244,16&quot;,&quot;text&quot;: &quot;+activarReplicabilidad(qtyCopias: int): void&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
+   <value name="bounds">1352,381,372,201</value>
   </value-owner>
   <value-owner id="5NLVc3gf40qzpT0+Zo25Zg">
    <value name="name">monstruos</value>
@@ -1851,8 +1850,8 @@
    <value name="returnType">void</value>
   </value-owner>
   <value-owner id="zMYHA2qIuk2buQbsPu9A9w">
-   <value name="name">runLab2</value>
-   <value name="order">6</value>
+   <value name="name">runLab2_D</value>
+   <value name="order">1</value>
   </value-owner>
   <value-owner id="zR01GNEu2UiyeAe5pkoHpw">
    <value name="name">Rectangle1</value>
@@ -1861,6 +1860,16 @@
   <value-owner id="GiTC0DKwkEGju44BvrxDNw">
    <value name="rendering">{&quot;bounds&quot;: &quot;1300,66,11,998&quot;,&quot;model&quot;: &quot;zR01GNEu2UiyeAe5pkoHpw&quot;,&quot;name&quot;: &quot;Rectangle1&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;1300,66,11,998&quot;,&quot;type&quot;: &quot;Rect&quot;}],&quot;type&quot;: &quot;RectShapeView&quot;}</value>
    <value name="bounds">1300,66,11,998</value>
+  </value-owner>
+  <value-owner id="hMDfB5zenEaqmVDSoHU73w">
+   <value name="name">copias</value>
+   <value name="order">10</value>
+   <value name="type">int</value>
+  </value-owner>
+  <value-owner id="y3+zvFM6zkKIq7Nkee/USA">
+   <value name="name">qtyCopias</value>
+   <value name="order">2</value>
+   <value name="type">int</value>
   </value-owner>
  </object-values>
  <relation-values/>
