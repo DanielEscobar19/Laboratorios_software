@@ -16,7 +16,7 @@ private:
   int copias = 0;
 
 public:
-  MonstruoReplicable_D(Monstruos& monstruos, bool esReplicable, int qtyCopias);
+  MonstruoReplicable_D(Monstruos& monstruos, bool esReplicable, int qtyCopias, int id);
   ~MonstruoReplicable_D();
   void desactivarReplicabilidad();
   void activarReplicabilidad(int qtyCopias);

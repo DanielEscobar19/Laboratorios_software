@@ -7,7 +7,7 @@ int Monstruos::getCurrentID() {
 
 string Monstruos::pertenencia() {
     string tipo = string(typeid(*this).name());
-    tipo = tipo.substr(1,tipo.length());
+    tipo = tipo.substr(2,tipo.length());
     return tipo;
 }
 

@@ -13,7 +13,8 @@ class MonstruoInvisible_S : public T {
     bool invisibilidad = false;
   public:
     template < typename ...Args >
-    MonstruoInvisible_S(bool invisibilidad, Args ...args) : T(std::forward<Args>(args)...), invisibilidad {invisibilidad} {}
+    MonstruoInvisible_S(bool invisibilidad, Args ...args) : T(std::forward<Args>(args)...), invisibilidad {invisibilidad} 
+    { }
 
     ~MonstruoInvisible_S() {}
 

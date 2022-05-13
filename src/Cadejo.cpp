@@ -19,7 +19,7 @@ string Cadejo::toString(){
     respuesta += (this->atrapado) ? " ya fue atrapado" : " sigue libre";
     // manada
     respuesta += (this->manada) ? 
-    " y pertenece a la manada " + std::to_string(this->manada->getCurrentID())
+    " y pertenece a la manada " + std::to_string(this->manada->getCurrentID()) + "."
     : " y no tiene manada.";
 
     return respuesta;
