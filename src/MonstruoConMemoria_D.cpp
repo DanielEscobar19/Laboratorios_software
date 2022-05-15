@@ -32,7 +32,7 @@ int MonstruoConMemoria_D::buscarEnMemoria(int ataqueNumero){
 string MonstruoConMemoria_D::toString(){
   string resultado = this->monstruos.toString();
   this->tieneMemoria == true ? resultado += " T" : resultado += " No t";
-  resultado += "iene la memoria activada y a guardado en ella " + to_string(this->ataquesRealizados.size()) + " registros.";
+  resultado += "iene la memoria activada y a guardado en ella " + to_string(this->ataquesRealizados.size()) + " registros. ";
   return resultado;
 }
 
