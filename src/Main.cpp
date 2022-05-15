@@ -14,6 +14,9 @@ Autores: Fabián Orozco Chaves - Daniel Escobar Giraldo - Manuel Arroyo.
 #include "MonstruoReplicable_E.h"
 #include "MonstruoReplicable_D.h"
 
+#include "MonstruoConMemoria_D.h"
+#include "MonstruoConMemoria_E.h"
+
 #include <iostream>
 using namespace std;
 
@@ -39,6 +42,7 @@ void declararGanador(Cazador* cazador) {
 void runLab2_E() {
   cout << "\nEjecutando solucion estatica (con plantillas)" << endl;
   int ids = 0;
+  Cazador cazador;
 
   cout << endl << "Creacion de 3 Wumpus:" << endl;
   Wumpus wumpus1(++ids);
@@ -46,6 +50,8 @@ void runLab2_E() {
   Wumpus wumpus2(++ids);
   cout << wumpus2.toString() << endl; 
   Wumpus wumpus3(++ids);
+  cout << wumpus3.toString() << endl;
+  Wumpus wumpus4(++ids);
   cout << wumpus3.toString() << endl;
   
   cout << endl << "Creacion manada de Wumpus y se agregan los Wumpus a la manada:" << endl;
@@ -66,11 +72,24 @@ void runLab2_E() {
   cout << wumpusReplicable1.toString() << endl;
   
   cout << endl << "Se crea Wumpus 3 con memoria" << endl;
-  // MANUEL. TODO
+  MonstruoConMemoria_E <Wumpus> wumpusConMemoria {true, wumpus3};
+  cout << wumpusConMemoria.toString() << endl;
+  cout << cazador.toString() << endl;
+  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+  cout << wumpusConMemoria.toString() << endl;
+  cout << cazador.toString() << endl;
+  cout << "El wumpus con memoria ataco dos veces al cazador con: ";
+  cout << wumpusConMemoria.buscarEnMemoria(0);
+  cout << " y " << wumpusConMemoria.buscarEnMemoria(1) << " de daño" <<endl;
 
   cout << "\nCombina replicabilidad e invisivilidad" << endl;
   MonstruoReplicable_E <MonstruoInvisible_S <Wumpus> > wumpusRepTransp1 {true, 7,wumpusInvisible1};
   cout << wumpusRepTransp1.toString() << endl;
+  
+  cout << "\nCombina replicabilidad, invisivilidad y memoria" << endl;
+  MonstruoConMemoria_E <MonstruoReplicable_E <MonstruoInvisible_S <Wumpus> > > superWumpus {true, wumpusRepTransp1};
+  cout << superWumpus.toString() << endl;
   
   cout << "\nManada invisible" << endl;
   MonstruoInvisible_S <MM> manadaInvisible1{true, manadaWumpus};
@@ -86,12 +105,17 @@ void runLab2_E() {
   cout << "\nSe desactiva el poder al wumpusInvisible" << endl;
   wumpusInvisible1.desActivarInvisibilidad();
   cout << wumpusInvisible1.toString() << endl;
+  
+  cout << "\nSe desactiva el poder de Memoria" << endl;
+  wumpusConMemoria.desactivarMemoria();
+  cout << wumpusConMemoria.toString() << endl;
 
   cout << "\nSe desactiva el poder a la manada" << endl;
   manadaInvisible1.desActivarInvisibilidad();
   cout << manadaInvisible1.toString() << endl;
 
-  // // MANUEL. TODO
+  manadaInvisible1.desActivarInvisibilidad();
+  cout << manadaInvisible1.toString() << endl;
 
 
 
@@ -102,6 +126,7 @@ void runLab2_E() {
 void runLab2_D() {
   cout << "Ejecutando solucion Dinamica (por herencia)" << endl;
   int ids = 0;
+  Cazador cazador;
 
   cout << endl << "Creacion de 3 Wumpus:" << endl;
   Wumpus wumpus1(++ids);
@@ -127,17 +152,30 @@ void runLab2_D() {
   cout << endl << "Se crea Wumpus 2 replicable" << endl;
   MonstruoReplicable_D wumpusReplicable1 {wumpus2, true, 5, ++ids};
   cout << wumpusReplicable1.toString() << endl;
+  
   cout << endl << "Se crea Wumpus 3 con memoria" << endl;
-  // MANUEL. TODO
+  MonstruoConMemoria_D wumpusConMemoria {wumpus3, true};
+  cout << wumpusConMemoria.toString() << endl;
+  cout << cazador.toString() << endl;
+  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+  cout << wumpusConMemoria.toString() << endl;
+  cout << cazador.toString() << endl;
+  cout << "El wumpus con memoria ataco dos veces al cazador con: ";
+  cout << wumpusConMemoria.buscarEnMemoria(0);
+  cout << " y " << wumpusConMemoria.buscarEnMemoria(1) << " de daño" <<endl;
 
   cout << "\nCombina replicabilidad e invisivilidad" << endl;
   MonstruoReplicable_D wumpusRepTransp1{wumpusInvisible1, true, 2,++ids};
   cout << wumpusRepTransp1.toString() << endl;
   
+  cout << "\nCombina replicabilidad, invisivilidad y memoria" << endl;
+  MonstruoConMemoria_D superWumpus {wumpusRepTransp1, true};
+  cout << superWumpus.toString() << endl;
+  
   cout << "\nManada invisible" << endl;
   MonstruoInvisible_D manadaInvisible1(manadaWumpus,true,++ids);
   cout << manadaInvisible1.toString() << endl;
-  // MANUEL. TODO
 
   cout << "\n========================================================" << endl;
   cout << "Desactivacion de los poderes" << endl;
@@ -148,12 +186,15 @@ void runLab2_D() {
   cout << "\nSe desactiva el poder al wumpusInvisible" << endl;
   wumpusInvisible1.desActivarInvisibilidad();
   cout << wumpusInvisible1.toString() << endl;
+  
+  cout << "\nSe desactiva el poder de Memoria" << endl;
+  wumpusConMemoria.desactivarMemoria();
+  cout << wumpusConMemoria.toString() << endl;
 
   cout << "\nSe desactiva el poder a la manada" << endl;
   manadaInvisible1.desActivarInvisibilidad();
   cout << manadaInvisible1.toString() << endl;
-
-  // MANUEL. TODO
+  
 }
 
 int main() {
