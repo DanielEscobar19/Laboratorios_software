@@ -1,16 +1,9 @@
 #include "MonstruoReplicable_D.h"
 #include <sstream>
 
-MonstruoReplicable_D::MonstruoReplicable_D(Monstruos& monstruos, bool esReplicable, int qtyCopias, int id) : monstruos {monstruos} , esReplicable {esReplicable} , copias {qtyCopias}
-{ 
-  this->id = id;
-}
+MonstruoReplicable_D::MonstruoReplicable_D(Monstruos& monstruos, bool esReplicable, int qtyCopias) : monstruos {monstruos} , esReplicable {esReplicable} , copias {qtyCopias}{}
 
-MonstruoReplicable_D::~MonstruoReplicable_D()
-{ 
-  // cout << "Destruye MonstruoReplicable_D de " << monstruos.pertenencia() << "{" << monstruos.getCurrentID() << "}" << endl;
-  // solo se crea en memoria dinámica entonces no se ocupa destruir
-}
+MonstruoReplicable_D::~MonstruoReplicable_D(){}
 
 string MonstruoReplicable_D::toString()
 { 

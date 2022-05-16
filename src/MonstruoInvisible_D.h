@@ -9,7 +9,7 @@ class MonstruoInvisible_D: public Monstruos {
     Monstruos & monstruos;
     bool invisibilidad = false;
  public:
-    MonstruoInvisible_D(Monstruos & monstruos, bool invisibilidad, int id);
+    MonstruoInvisible_D(Monstruos & monstruos, bool invisibilidad);
     ~MonstruoInvisible_D();
     string toString();
     void activarInvisibilidad();

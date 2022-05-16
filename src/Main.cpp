@@ -154,11 +154,11 @@ void runLab2_D() {
   cout << "\n========================================================" << endl;
   cout << "Se activan poderes" << endl;
   cout << endl << "Se crea Wumpus 1 invisible" << endl;
-  MonstruoInvisible_D wumpusInvisible1 {wumpus1, true, ++ids};
+  MonstruoInvisible_D wumpusInvisible1 {wumpus1, true};
   cout << wumpusInvisible1.toString() << endl;
 
   cout << endl << "Se crea Wumpus 2 replicable" << endl;
-  MonstruoReplicable_D wumpusReplicable1 {wumpus2, true, 5, ++ids};
+  MonstruoReplicable_D wumpusReplicable1 {wumpus2, true, 5};
   cout << wumpusReplicable1.toString() << endl;
   
   cout << endl << "Se crea Wumpus 3 con memoria" << endl;
@@ -174,7 +174,7 @@ void runLab2_D() {
   cout << " y " << wumpusConMemoria.buscarEnMemoria(1) << " de daño" <<endl;
 
   cout << "\nCombina replicabilidad e invisivilidad" << endl;
-  MonstruoReplicable_D wumpusRepTransp1{wumpusInvisible1, true, 2,++ids};
+  MonstruoReplicable_D wumpusRepTransp1{wumpusInvisible1, true, 2};
   cout << wumpusRepTransp1.toString() << endl;
   
   cout << "\nCombina replicabilidad, invisivilidad y memoria" << endl;
@@ -182,11 +182,11 @@ void runLab2_D() {
   cout << superWumpus.toString() << endl;
   
   cout << "\nManada invisible" << endl;
-  MonstruoInvisible_D manadaInvisible1(manadaWumpus,true,++ids);
+  MonstruoInvisible_D manadaInvisible1(manadaWumpus,true);
   cout << manadaInvisible1.toString() << endl;
   
   cout << "\nManada Replicable" << endl;
-  MonstruoReplicable_D manadaReplicable(manadaWumpus, true, 2, ids++);
+  MonstruoReplicable_D manadaReplicable(manadaWumpus, true, 2);
   cout << manadaReplicable.toString() << endl;
   
   cout << "\nManada con Memoria" << endl;

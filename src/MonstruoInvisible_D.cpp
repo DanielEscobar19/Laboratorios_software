@@ -1,8 +1,5 @@
 #include "MonstruoInvisible_D.h"
-MonstruoInvisible_D::MonstruoInvisible_D(Monstruos & monstruos, bool invisibilidad, int id) : monstruos{monstruos}, invisibilidad {invisibilidad} 
-{ 
-    this->id = id;
-}
+MonstruoInvisible_D::MonstruoInvisible_D(Monstruos & monstruos, bool invisibilidad) : monstruos{monstruos}, invisibilidad {invisibilidad} {}
 
 MonstruoInvisible_D::~MonstruoInvisible_D() {}
 
