@@ -94,7 +94,15 @@ void runLab2_E() {
   cout << "\nManada invisible" << endl;
   MonstruoInvisible_S <MM> manadaInvisible1{true, manadaWumpus};
   cout << manadaInvisible1.toString() << endl;
-  // // MANUEL. TODO
+  
+  cout << "\nManada Replicable" << endl;
+  MonstruoReplicable_E <MM> manadaReplicable{true, 3, manadaWumpus};
+  cout << manadaReplicable.toString() << endl;
+  
+  cout << "\nManada con Memoria" << endl;
+  MonstruoConMemoria_E <MM> manadaConMemoria{true, manadaWumpus};
+  cout << manadaConMemoria.toString() << endl;
+  
 
   cout << "\n========================================================" << endl;
   cout << "Desactivacion de los poderes" << endl;
@@ -176,6 +184,14 @@ void runLab2_D() {
   cout << "\nManada invisible" << endl;
   MonstruoInvisible_D manadaInvisible1(manadaWumpus,true,++ids);
   cout << manadaInvisible1.toString() << endl;
+  
+  cout << "\nManada Replicable" << endl;
+  MonstruoReplicable_D manadaReplicable(manadaWumpus, true, 2, ids++);
+  cout << manadaReplicable.toString() << endl;
+  
+  cout << "\nManada con Memoria" << endl;
+  MonstruoConMemoria_D manadaConMemoria(manadaWumpus, true);
+  cout << manadaConMemoria.toString() << endl;
 
   cout << "\n========================================================" << endl;
   cout << "Desactivacion de los poderes" << endl;
