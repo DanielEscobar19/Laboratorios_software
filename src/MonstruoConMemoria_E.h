@@ -49,6 +49,12 @@ public:
     resultado += "iene la memoria activada y a guardado en ella " + to_string(this->ataquesRealizados.size()) + " registros. ";
     return resultado;
   };
+
+  int atacar(Agente * agente) {
+    int danyo = T::atacar(agente);
+    guardarEnMemoria(danyo);
+  return danyo;
+  };
 };
 
 #endif  // MONSTRUO_CON_MEMORIA_E

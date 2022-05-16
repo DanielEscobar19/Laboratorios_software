@@ -37,5 +37,7 @@ string MonstruoConMemoria_D::toString(){
 }
 
 int MonstruoConMemoria_D::atacar(Agente * agente) {
-  return monstruos.atacar(agente);
+  int danyo = monstruos.atacar(agente);
+  guardarEnMemoria(danyo);
+  return danyo;
 }

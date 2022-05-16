@@ -75,8 +75,9 @@ void runLab2_E() {
   MonstruoConMemoria_E <Wumpus> wumpusConMemoria {true, wumpus3};
   cout << wumpusConMemoria.toString() << endl;
   cout << cazador.toString() << endl;
-  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
-  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+
+  wumpusConMemoria.atacar(&cazador);
+  wumpusConMemoria.atacar(&cazador);
   cout << wumpusConMemoria.toString() << endl;
   cout << cazador.toString() << endl;
   cout << "El wumpus con memoria ataco dos veces al cazador con: ";
@@ -165,8 +166,8 @@ void runLab2_D() {
   MonstruoConMemoria_D wumpusConMemoria {wumpus3, true};
   cout << wumpusConMemoria.toString() << endl;
   cout << cazador.toString() << endl;
-  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
-  wumpusConMemoria.guardarEnMemoria(wumpusConMemoria.atacar(&cazador));
+  wumpusConMemoria.atacar(&cazador);
+  wumpusConMemoria.atacar(&cazador);
   cout << wumpusConMemoria.toString() << endl;
   cout << cazador.toString() << endl;
   cout << "El wumpus con memoria ataco dos veces al cazador con: ";
