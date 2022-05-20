@@ -10,32 +10,53 @@
 #include "BombedMazeFactory.h"
 #include "MazeGame.h"
 
-#include "ConstructorSerializadorAbstracto.h"
+// #include "ConstructorSerializadorAbstracto.h"
 #include "Maze.h"
 
 #include <iostream>
 using namespace std;
 
-string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
+// string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    EnchantedMazeFactory emf;
-    BombedMazeFactory bf;
-    MazeGame mg1;
-    MazeGame mg2;
+    EnchantedMazeFactory enchantedFactory;
+    BombedMazeFactory BombedFactory;
+    MazeGame mazeGame1;
+    MazeGame mazeGame2;
     /* pedir al usuario el tipo de laberinto */
 
-    // si el usuario escoge laberinto encantado
-    mg1.createMaze(&emf);
-    cout << mg1.toString() << endl;
-    
-    // si el usuario escoge laberinto con bombas
-    mg2.createMaze(&bf);
-    cout << mg2.toString() << endl;
+    int opcionDeUsuario = 0;
+    cout << "Seleccione el tipo de laberinto\n" << endl;
+    cout << "1. Laberinto encantado" << endl;
+    cout << "2. Laberinto con bombas" << endl;
+    cout << " > " << endl;
+    cin >> opcionDeUsuario;
 
+    while(true) {
+        if (opcionDeUsuario >= 0 && opcionDeUsuario <= 1) {
+            if (opcionDeUsuario == 1) {
+                // si el usuario escoge laberinto encantado
+                mazeGame1.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
+                cout << mazeGame1.toString() << endl;
+            }
+            else {
+                // si el usuario escoge laberinto con bombas
+                mazeGame2.createMaze(&BombedFactory);  // 7 rooms. Cada room con 2 puertas.
+                cout << mazeGame2.toString() << endl;
+            }
+            break;
+        }
+        else {
+            cout << " Ingrese 1 o 2\n > " << endl;
+            cin >> opcionDeUsuario;
+        }
+    }
     return 0;
 }
 
+// string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze) {
+//     return "";
+// }
