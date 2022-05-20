@@ -29,20 +29,22 @@ int main(int argc, char** argv) {
     /* pedir al usuario el tipo de laberinto */
 
     int opcionDeUsuario = 0;
-    cout << "Seleccione el tipo de laberinto\n" << endl;
+    cout << "\nSeleccione el tipo de laberinto" << endl;
     cout << "1. Laberinto encantado" << endl;
     cout << "2. Laberinto con bombas" << endl;
-    cout << " > " << endl;
+    cout << " > ";
     cin >> opcionDeUsuario;
 
     while(true) {
-        if (opcionDeUsuario >= 0 && opcionDeUsuario <= 1) {
+        if (opcionDeUsuario >= 1 && opcionDeUsuario <= 2) {
             if (opcionDeUsuario == 1) {
+                cout << "--------------------------------------" << endl;
                 // si el usuario escoge laberinto encantado
                 mazeGame1.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
                 cout << mazeGame1.toString() << endl;
             }
             else {
+                cout << "--------------------------------------" << endl;
                 // si el usuario escoge laberinto con bombas
                 mazeGame2.createMaze(&BombedFactory);  // 7 rooms. Cada room con 2 puertas.
                 cout << mazeGame2.toString() << endl;
@@ -50,7 +52,7 @@ int main(int argc, char** argv) {
             break;
         }
         else {
-            cout << " Ingrese 1 o 2\n > " << endl;
+            cout << "Ingrese 1 o 2\n > ";
             cin >> opcionDeUsuario;
         }
     }

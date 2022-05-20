@@ -24,6 +24,9 @@ private:
     vector< Room* > rooms;
 };
 
+Maze::Maze() {
+}
+
 Maze::Maze(const Maze& orig) {
 }
 
