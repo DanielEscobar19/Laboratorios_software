@@ -9,11 +9,14 @@
 #include "EnchantedMazeFactory.h"
 #include "BombedMazeFactory.h"
 #include "MazeGame.h"
+
+#include "ConstructorSerializadorAbstracto.h"
+#include "Maze.h"
+
 #include <iostream>
 using namespace std;
 
-
-string director();
+string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
 
 /*
  * 

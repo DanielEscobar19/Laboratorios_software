@@ -12,7 +12,7 @@ using namespace std;
 
 class Maze {
 public:
-    Maze(string type);
+    Maze();
     Maze(const Maze& orig);
     virtual ~Maze();
     
