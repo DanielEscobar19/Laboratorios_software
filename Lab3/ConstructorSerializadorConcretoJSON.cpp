@@ -9,18 +9,15 @@ ConstructorSerializadorJSON::ConstructorSerializadorJSON()
 ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 {}
 
-void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto)
-{
+void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto) {
 	serializacion = "{ ";
 }
 
-void ConstructorSerializadorJSON::finObjeto()
-{
+void ConstructorSerializadorJSON::finObjeto() {
 	serializacion += "}";
 }
 
-void ConstructorSerializadorJSON::serializarRoom(Room* room)
-{
+void ConstructorSerializadorJSON::serializarRoom(Room* room) {
   serializacion += "Room : {";
   serializacion += " \"Type\":" + room->getType() + ", ";
   serializacion += " \"id\":" + room->getType() + "}";
@@ -38,14 +35,18 @@ void ConstructorSerializadorJSON::serializarLado(MapSite::Direction direction, R
     // verifica si es una puerta
     Door* doorPtr = dynamic_cast<Door*>(side);
     if(doorPtr) {
+      // serializa la puerta
       this->serializarDoor(doorPtr);
     } else {
+        // verifica si es una pared
         Wall* wallPtr = dynamic_cast<Wall*>(side);
         if (wallPtr) {
+          // serializa la pared
           this->serializarWall(wallPtr);
       }
     }
   }
+  side = nullptr;
 }
 
 void ConstructorSerializadorJSON::serializarDoor(Door* door) {
