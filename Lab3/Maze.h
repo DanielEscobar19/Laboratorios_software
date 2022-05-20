@@ -12,7 +12,7 @@ using namespace std;
 
 class Maze {
 public:
-    Maze();
+    Maze(string type);
     Maze(const Maze& orig);
     virtual ~Maze();
     
@@ -23,9 +23,6 @@ public:
 private:
     vector< Room* > rooms;
 };
-
-Maze::Maze() {
-}
 
 Maze::Maze(const Maze& orig) {
 }

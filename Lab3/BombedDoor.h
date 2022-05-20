@@ -17,7 +17,7 @@ private:
 
 };
 
-int BombedDoor::idg = 0;
+int MapSite::idg = 0;
 
 BombedDoor::BombedDoor()
 {

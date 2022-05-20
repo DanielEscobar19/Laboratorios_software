@@ -1,0 +1,26 @@
+Puerta: tipo, id, is open, roomID1, roomID2
+Pared: tipo, id
+
+Maze:
+	Room: tipo, id 
+		North: puerta || pared
+		East: puerta  || pared
+		West: puerta  || pared
+		South: puerta || pared
+
+
+Maze -> getVector
+getVector -> recorre Rooms
+Room -> getSide
+porCadaSide -> comparamos con getType
+	pared: getID
+	puerta: getID, getRooms, getIsOpen
+
+El abstracto tiene los casos:
+SerializarRoom
+	SerializarDoor
+	SerializarWall
+
+
+el director debe hacer getType del maze
+

@@ -31,6 +31,7 @@ MazeGame::~MazeGame() {
 }
 
 Maze* MazeGame::createMaze(MazeFactory* f) {
+    
     aMaze = f->createMaze();
 
     Room* r1 = f->createRoom(); //new Room(1);
@@ -56,6 +57,8 @@ Maze* MazeGame::createMaze(MazeFactory* f) {
     r2->SetSide(MapSite::East, f->createWall());
     r2->SetSide(MapSite::South, f->createWall());
     r2->SetSide(MapSite::West, theDoor);
+
+
 
     return aMaze;
 }

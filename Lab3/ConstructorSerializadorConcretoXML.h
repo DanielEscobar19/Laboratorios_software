@@ -1,0 +1,4 @@
+#ifndef SERIALIZADOR_XML_H
+#define SERIALIZADOR_XML_H
+
+#endif  // SERIALIZADOR_XML_H

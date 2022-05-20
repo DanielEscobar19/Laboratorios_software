@@ -12,6 +12,9 @@
 #include <iostream>
 using namespace std;
 
+
+string director();
+
 /*
  * 
  */
