@@ -1,6 +1,4 @@
 #include "ConstructorSerializadorConcretoXML.h"
-#include <string>
-#include "MapSite.h"
 
 ConstructorSerializadorXML::ConstructorSerializadorXML() : serializacion("") , nombreObjeto("")
 {}

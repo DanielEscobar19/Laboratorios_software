@@ -1,8 +1,6 @@
 #ifndef SERIALIZADOR_XML_H
 #define SERIALIZADOR_XML_H
 
-using namespace std;
-
 #include "ConstructorSerializadorAbstracto.h"
 
 class ConstructorSerializadorXML : public ConstructorSerializadorAbstracto {

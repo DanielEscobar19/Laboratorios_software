@@ -1,11 +1,7 @@
 #ifndef SERIALIZADOR_JSON_H
 #define SERIALIZADOR_JSON_H
 
-using namespace std;
-
 #include "ConstructorSerializadorAbstracto.h"
-#include <string>
-#include "MapSite.h"
 
 class ConstructorSerializadorJSON : public ConstructorSerializadorAbstracto {
 public:

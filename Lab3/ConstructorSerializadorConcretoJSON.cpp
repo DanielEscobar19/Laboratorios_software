@@ -1,6 +1,4 @@
 #include "ConstructorSerializadorConcretoJSON.h"
-#include <string>
-#include "MapSite.h"
 
 ConstructorSerializadorJSON::ConstructorSerializadorJSON()
 {}
