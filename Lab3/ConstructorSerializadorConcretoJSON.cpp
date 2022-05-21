@@ -10,17 +10,17 @@ ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 {}
 
 void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto) {
-	serializacion = "{ ";
+	serializacion = '{';
 }
 
 void ConstructorSerializadorJSON::finObjeto() {
-	serializacion += "}";
+	serializacion = serializacion + "\n}";
 }
 
 void ConstructorSerializadorJSON::serializarRoom(Room* room) {
-  serializacion += "\"Room\" : {";
-  serializacion += " \"Type\":" + room->getType() + ", ";
-  serializacion += " \"id\":" + room->getType() + "}";
+  serializacion = serializacion + "\"Room\" : {";
+  serializacion = serializacion + " \"Type\" : \"" + room->getType() + "\",";
+  serializacion = serializacion + " \"id\" :" + to_string(room->getId()) + '}';
   this->serializarLado(MapSite::Direction::North, room);
   this->serializarLado(MapSite::Direction::South, room);
   this->serializarLado(MapSite::Direction::East, room);
@@ -28,10 +28,10 @@ void ConstructorSerializadorJSON::serializarRoom(Room* room) {
 }
 
 void ConstructorSerializadorJSON::serializarLado(MapSite::Direction direction, Room* room) {
-  MapSite* side = nullptr;
+  MapSite* side = room->GetSide(direction);
 
   // verifica si la sala tiene el lado.
-  if (side = room->GetSide(direction)) {
+  if (side) {
     // verifica si es una puerta
     Door* doorPtr = dynamic_cast<Door*>(side);
     if(doorPtr) {
