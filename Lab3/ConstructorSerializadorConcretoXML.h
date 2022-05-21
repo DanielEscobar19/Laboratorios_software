@@ -24,4 +24,66 @@ private:
 	string nombreObjeto;
 };
 
+ConstructorSerializadorXML::ConstructorSerializadorXML() : serializacion("") , nombreObjeto("")
+{}
+
+ConstructorSerializadorXML::~ConstructorSerializadorXML()
+{}
+
+void ConstructorSerializadorXML::inicioObjeto(string nombreObjeto) {
+	serializacion += '<' + nombreObjeto + '>';
+  this->nombreObjeto = nombreObjeto;
+}
+
+void ConstructorSerializadorXML::finObjeto() {
+	serializacion += "\n</" + this->nombreObjeto + '>';
+}
+
+void ConstructorSerializadorXML::serializarRoom(Room* room) {
+	serializacion = serializacion + "\n<Room";
+	serializacion = serializacion + " type" + '=' + '\"' + room->getType() + '\"';
+	serializacion = serializacion + " id" + '=' + '\"' + to_string(room->getId()) + '\"';
+	serializacion = serializacion + "</Room>";
+
+	this->serializarLado(MapSite::Direction::North, room);
+  this->serializarLado(MapSite::Direction::South, room);
+  this->serializarLado(MapSite::Direction::East, room);
+  this->serializarLado(MapSite::Direction::West, room);
+}
+
+void ConstructorSerializadorXML::serializarLado(MapSite::Direction direction, Room* room) {
+	MapSite* side = room->GetSide(direction);
+
+  // verifica si la sala tiene el lado.
+  if (side) {
+    // verifica si es una puerta
+    Door* doorPtr = dynamic_cast<Door*>(side);
+    if(doorPtr) {
+			// serializa la puerta
+      this->serializarDoor(doorPtr);
+    } else {
+    		// verifica si es una pared
+        Wall* wallPtr = dynamic_cast<Wall*>(side);
+        if (wallPtr) {
+					// serializa la pared
+          this->serializarWall(wallPtr);
+      }
+    }
+  }
+	side = nullptr;
+}
+
+void ConstructorSerializadorXML::serializarDoor(Door* door) {
+	
+}
+
+void ConstructorSerializadorXML::serializarWall(Wall* wall) {
+	
+}
+
+string ConstructorSerializadorXML::obtSerializacion() {
+	return serializacion;
+}
+
+
 #endif  // SERIALIZADOR_XML_H
