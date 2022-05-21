@@ -18,7 +18,7 @@ void ConstructorSerializadorJSON::finObjeto() {
 }
 
 void ConstructorSerializadorJSON::serializarRoom(Room* room) {
-  serializacion += "Room : {";
+  serializacion += "\"Room\" : {";
   serializacion += " \"Type\":" + room->getType() + ", ";
   serializacion += " \"id\":" + room->getType() + "}";
   this->serializarLado(MapSite::Direction::North, room);

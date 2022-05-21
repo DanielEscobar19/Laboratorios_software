@@ -6,7 +6,8 @@
 class EnchantedWall : public Wall {
     public:
     EnchantedWall();
-	~EnchantedWall();
+    ~EnchantedWall();
+    void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
     void enter() override;
 };
@@ -21,5 +22,10 @@ EnchantedWall::~EnchantedWall() {
 void EnchantedWall::enter()
 {
     cout << "agente choca con " << MapSite::getType() << endl;
+}
+
+void EnchantedWall::getAtributos(vector< pair< string, string > >& vectorValores) {
+    vectorValores.push_back( pair< string, string >("type", this->getType()));
+    vectorValores.push_back( pair< string, string >("id", to_string(this->getId())));
 }
 #endif  //_ENCHANTEDWALL_H

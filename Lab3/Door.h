@@ -8,7 +8,7 @@ public:
     Door(Room* = 0, Room* = 0);
     Door(const Door& orig);
     virtual ~Door();
-    
+
     Room* OtherSideFrom(Room*);
 
 private:

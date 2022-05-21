@@ -10,6 +10,7 @@ class BombedDoor : public Door {
 public:
 	BombedDoor();
 	~BombedDoor();
+	void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
 	void enter() override;
 
@@ -31,6 +32,11 @@ BombedDoor::~BombedDoor()
 void BombedDoor::enter()
 {
 	cout << "agente pasa por " << MapSite::getType() << endl;
+}
+
+
+void BombedDoor::getAtributos(vector< pair< string, string > >& vectorValores) {
+
 }
 
 #endif  //_BOMBEDDOOR_H

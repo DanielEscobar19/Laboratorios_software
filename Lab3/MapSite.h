@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 #ifndef MAPSITE_H
@@ -19,6 +20,7 @@ public:
     virtual string toString();
     void setType(string nt);
     string getType();
+    virtual void getAtributos(vector< pair< string, string > >& vectorValores);
 
 private:
     int id;
@@ -54,5 +56,11 @@ string MapSite::toString()
     s << MapSite::getType() << " # " << MapSite::getId() << endl;
     return s.str();
 }
+
+void MapSite::getAtributos(vector< pair< string, string > >& vectorValores) {
+    vectorValores.push_back( pair< string, string >("id", to_string(this->id)));
+    vectorValores.push_back( pair< string, string >("type", this->type));
+}
+
 #endif	/* MAPSITE_H */
 
