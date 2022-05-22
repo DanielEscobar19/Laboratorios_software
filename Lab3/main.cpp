@@ -46,13 +46,16 @@ int main(int argc, char** argv) {
                 // si el usuario escoge laberinto encantado
                 mazeGame1.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
                 cout << mazeGame1.toString() << endl;
-                cout << director(json, mazeGame1.getAtributtes());
+                cout << director(json, mazeGame1.getAtributtes()) << endl;
+                cout << director(xml, mazeGame1.getAtributtes()) << endl;
             }
             else {
                 cout << "--------------------------------------" << endl;
                 // si el usuario escoge laberinto con bombas
                 mazeGame2.createMaze(&BombedFactory);  // 7 rooms. Cada room con 2 puertas.
                 cout << mazeGame2.toString() << endl;
+                cout << director(json, mazeGame2.getAtributtes()) << endl;
+                cout << director(xml, mazeGame2.getAtributtes()) << endl;
             }
             break;
         }
