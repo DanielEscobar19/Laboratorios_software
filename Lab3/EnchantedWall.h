@@ -7,7 +7,7 @@ class EnchantedWall : public Wall {
     public:
     EnchantedWall();
     ~EnchantedWall();
-    void getAtributos(vector< pair< string, string > >& vectorValores) override;
+    virtual void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
     void enter() override;
 };

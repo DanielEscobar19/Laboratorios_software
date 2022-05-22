@@ -10,7 +10,7 @@ class BombedWall : public Wall {
 public:
 	BombedWall();
 	~BombedWall();
-	void getAtributos(vector< pair< string, string > >& vectorValores) override;
+	virtual void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
 	void enter() override;
 };
