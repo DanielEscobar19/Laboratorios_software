@@ -30,24 +30,24 @@ ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 {}
 
 void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto = "") {
-	serializacion = '{';
+	serializacion = "{";
+  serializacion = serializacion + "\n\t" + "\"" + nombreObjeto + "\" :";
 }
+
 
 void ConstructorSerializadorJSON::finObjeto() {
 	serializacion = serializacion + "\n}";
 }
 
 void ConstructorSerializadorJSON::serializarRoom(Room* room) {
-
-  serializacion = serializacion + "\n\t\"Room\" : \n\t{";
-  serializacion = serializacion + " \"Type\" : \"" + room->getType() + "\",";
-  serializacion = serializacion + " \"id\" :" + to_string(room->getId()) + ',';
+  serializacion = serializacion + "\n\t{\n\t\t\"Room\" : \n\t\t{";
+  serializacion = serializacion + " \n\t\t\t\"Type\" : \"" + room->getType() + "\",";
+  serializacion = serializacion + " \n\t\t\t\"id\" :" + to_string(room->getId()) + ',';
   this->serializarLado(MapSite::Direction::North, room);
   this->serializarLado(MapSite::Direction::South, room);
   this->serializarLado(MapSite::Direction::East, room);
   this->serializarLado(MapSite::Direction::West, room);
-
-  serializacion = serializacion + "\n\t}"; // finaliza el serializado de room
+  serializacion = serializacion + "\n\t\t}"; // finaliza el serializado de room
 }
 
 void ConstructorSerializadorJSON::serializarLado(MapSite::Direction direction, Room* room) {
@@ -76,7 +76,7 @@ void ConstructorSerializadorJSON::serializarDoor(Door* door) {
   vector<pair<string, string >> atributos;
   door->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "Door: {";
+  serializacion += "\n\tDoor: {";
   while(it != atributos.end()){
     serializacion += it->first + ":\"" + it->second + "\"";
     it++;
@@ -91,7 +91,7 @@ void ConstructorSerializadorJSON::serializarWall(Wall* wall) {
   vector<pair<string, string >> atributos;
   wall->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "Wall: {";
+  serializacion += "\n\tWall: {";
   while(it != atributos.end()){
     serializacion += it->first + ":\"" + it->second + "\"";
 		it++;
