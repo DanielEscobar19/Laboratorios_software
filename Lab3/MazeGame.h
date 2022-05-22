@@ -15,7 +15,7 @@ public:
     
     Maze* createMaze(MazeFactory*);
     string toString();
-
+    const Maze * getAtributtes();
 private:
     Maze* aMaze;
 };
@@ -65,6 +65,10 @@ string MazeGame::toString()
     ostringstream s;
     s << aMaze->toString();
     return s.str();
+}
+
+const Maze * MazeGame::getAtributtes() {
+    return aMaze;
 }
 #endif	/* MAZEGAME_H */
 

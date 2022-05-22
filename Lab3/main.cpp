@@ -10,13 +10,16 @@
 #include "BombedMazeFactory.h"
 #include "MazeGame.h"
 
-// #include "ConstructorSerializadorAbstracto.h"
+#include "ConstructorSerializadorAbstracto.h"
+#include "ConstructorSerializadorConcretoJSON.h"
+#include "ConstructorSerializadorConcretoXML.h"
+
 #include "Maze.h"
 
 #include <iostream>
 using namespace std;
 
-// string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
+string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
 
 /*
  * 
@@ -59,6 +62,13 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-// string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze) {
-//     return "";
-// }
+string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze) {
+    vector<Room *> rooms =  maze.getAtributtes();
+
+    constructorAbstracto.inicioObjeto("Maze");
+    for (int i = 0; i < rooms.size(); ++i) {
+        constructorAbstracto.serializarRoom(rooms[i]);
+    }
+    constructorAbstracto.finObjeto();
+    return constructorAbstracto.obtSerializacion();
+}

@@ -29,7 +29,7 @@ ConstructorSerializadorJSON::ConstructorSerializadorJSON()
 ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 {}
 
-void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto) {
+void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto = "") {
 	serializacion = '{';
 }
 

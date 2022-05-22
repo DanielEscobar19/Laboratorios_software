@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 #include "Room.h"
@@ -19,6 +20,7 @@ public:
     void AddRoom(Room*);
     Room* RoomNo(int) const;
 
+    const vector<Room*> & getAtributtes();
     string toString();
 private:
     vector< Room* > rooms;
@@ -54,5 +56,10 @@ string Maze::toString()
 
     return s.str();
 }
+
+const vector<Room*> & Maze::getAtributtes() {
+    return this->rooms;
+}
+
 #endif	/* MAZE_H */
 
