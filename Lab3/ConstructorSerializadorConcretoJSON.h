@@ -31,14 +31,16 @@ ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 
 void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto = "") {
 	serializacion = '{';
+  serializacion = serializacion + "\n\t" + nombreObjeto + ':';
 }
+
 
 void ConstructorSerializadorJSON::finObjeto() {
 	serializacion = serializacion + "\n}";
 }
 
 void ConstructorSerializadorJSON::serializarRoom(Room* room) {
-  serializacion = serializacion + "\n\t\"Room\" : \n\t{";
+  serializacion = serializacion + "{\n\t\"Room\" : \n\t{";
   serializacion = serializacion + " \"Type\" : \"" + room->getType() + "\",";
   serializacion = serializacion + " \"id\" :" + to_string(room->getId()) + ',';
   this->serializarLado(MapSite::Direction::North, room);
