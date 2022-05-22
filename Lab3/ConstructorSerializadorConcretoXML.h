@@ -74,7 +74,18 @@ void ConstructorSerializadorXML::serializarLado(MapSite::Direction direction, Ro
 }
 
 void ConstructorSerializadorXML::serializarDoor(Door* door) {
-	
+  vector<pair<string, string >> atributos;
+  door->getAtributos(atributos);
+  vector<pair<string, string >>::iterator it = atributos.begin();
+  serializacion += "<Door ";
+  while(it != atributos.end()){
+    serializacion += it->first + "=\"" + it->second + "\"";
+    it++;
+    if(it != atributos.end()){
+      serializacion += ", ";
+    }
+  }
+  serializacion += "</Door>";
 }
 
 void ConstructorSerializadorXML::serializarWall(Wall* wall) {
