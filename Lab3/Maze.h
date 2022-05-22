@@ -20,7 +20,7 @@ public:
     void AddRoom(Room*);
     Room* RoomNo(int) const;
 
-    const vector<Room*> & getAtributtes();
+    vector<Room*> & getAtributtes();
     string toString();
 private:
     vector< Room* > rooms;
@@ -57,7 +57,7 @@ string Maze::toString()
     return s.str();
 }
 
-const vector<Room*> & Maze::getAtributtes() {
+vector<Room*> & Maze::getAtributtes() {
     return this->rooms;
 }
 

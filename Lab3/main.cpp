@@ -19,7 +19,7 @@
 #include <iostream>
 using namespace std;
 
-string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze);
+string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze* maze);
 
 /*
  * 
@@ -37,7 +37,8 @@ int main(int argc, char** argv) {
     cout << "2. Laberinto con bombas" << endl;
     cout << " > ";
     cin >> opcionDeUsuario;
-
+    ConstructorSerializadorJSON json;
+    ConstructorSerializadorXML xml;
     while(true) {
         if (opcionDeUsuario >= 1 && opcionDeUsuario <= 2) {
             if (opcionDeUsuario == 1) {
@@ -45,6 +46,7 @@ int main(int argc, char** argv) {
                 // si el usuario escoge laberinto encantado
                 mazeGame1.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
                 cout << mazeGame1.toString() << endl;
+                cout << director(json, mazeGame1.getAtributtes());
             }
             else {
                 cout << "--------------------------------------" << endl;
@@ -62,9 +64,8 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze& maze) {
-    vector<Room *> rooms =  maze.getAtributtes();
-
+string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze * maze) {
+    vector<Room *> rooms =  maze->getAtributtes();
     constructorAbstracto.inicioObjeto("Maze");
     for (int i = 0; i < rooms.size(); ++i) {
         constructorAbstracto.serializarRoom(rooms[i]);
