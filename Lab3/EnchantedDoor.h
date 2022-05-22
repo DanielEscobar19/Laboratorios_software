@@ -32,7 +32,11 @@ void EnchantedDoor::enter()
 }
 
 void EnchantedDoor::getAtributos(vector< pair< string, string > >& vectorValores) {
-	
+	vectorValores.push_back( pair< string, string >("type", this->getType()));
+	vectorValores.push_back( pair< string, string >("id", to_string(this->getId())));
+	vectorValores.push_back( pair< string, string >("is_Open", to_string(this->isOpen())));
+	vectorValores.push_back( pair< string, string >("Room1", to_string(this->getFirstRoom()->getId())));
+	vectorValores.push_back( pair< string, string >("Room2", to_string(this->getSecondRoom()->getId())));
 }
 
 #endif  //_ENCHANTEDDOOR_H

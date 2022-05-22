@@ -8,9 +8,10 @@ public:
     Door(Room* = 0, Room* = 0);
     Door(const Door& orig);
     virtual ~Door();
-
+    Room* getFirstRoom();
+    Room* getSecondRoom();
     Room* OtherSideFrom(Room*);
-
+    bool isOpen();
 private:
     Room* _room1;
     Room* _room2;
@@ -22,6 +23,18 @@ Door::Door(Room* f, Room* s): _room1(f), _room2(f) {
 
 Door::Door(const Door& orig) {
 
+}
+
+Room* Door::getFirstRoom() {
+    return _room1;
+}
+
+Room* Door::getSecondRoom() {
+    return _room2;
+}
+
+bool Door::isOpen() {
+    return _isOpen;
 }
 
 Door::~Door() {
