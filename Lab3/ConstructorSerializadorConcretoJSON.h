@@ -70,11 +70,22 @@ void ConstructorSerializadorJSON::serializarLado(MapSite::Direction direction, R
 }
 
 void ConstructorSerializadorJSON::serializarDoor(Door* door) {
-
+	
 }
 
 void ConstructorSerializadorJSON::serializarWall(Wall* wall) {
-
+  vector<pair<string, string >> atributos;
+  door->getAtributos(&atributos);
+  vector<pair<string, string >>::iterator it = atributos.begin();
+  serializacion += "Wall: {"
+  while(it != atributos.end()){
+    serializacion += it->first() + ":\"" + it->second() + "\"";
+	it++
+	if(it != atributos.end()){
+	  serializacion += ", "
+	}
+  }
+  serializacion += "}"
 }
 
 string ConstructorSerializadorJSON::obtSerializacion() {
