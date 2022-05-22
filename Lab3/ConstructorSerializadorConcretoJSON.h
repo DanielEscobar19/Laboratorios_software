@@ -76,7 +76,7 @@ void ConstructorSerializadorJSON::serializarDoor(Door* door) {
   vector<pair<string, string >> atributos;
   door->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "Door: {";
+  serializacion += "\n\tDoor: {";
   while(it != atributos.end()){
     serializacion += it->first + ":\"" + it->second + "\"";
     it++;
@@ -91,7 +91,7 @@ void ConstructorSerializadorJSON::serializarWall(Wall* wall) {
   vector<pair<string, string >> atributos;
   wall->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "Wall: {";
+  serializacion += "\n\tWall: {";
   while(it != atributos.end()){
     serializacion += it->first + ":\"" + it->second + "\"";
 		it++;
