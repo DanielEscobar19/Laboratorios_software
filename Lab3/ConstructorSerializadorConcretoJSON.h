@@ -38,13 +38,14 @@ void ConstructorSerializadorJSON::finObjeto() {
 }
 
 void ConstructorSerializadorJSON::serializarRoom(Room* room) {
-  serializacion = serializacion + "\"Room\" : {";
+  serializacion = serializacion + "\n\t\"Room\" : \n\t{";
   serializacion = serializacion + " \"Type\" : \"" + room->getType() + "\",";
-  serializacion = serializacion + " \"id\" :" + to_string(room->getId()) + '}';
+  serializacion = serializacion + " \"id\" :" + to_string(room->getId()) + ',';
   this->serializarLado(MapSite::Direction::North, room);
   this->serializarLado(MapSite::Direction::South, room);
   this->serializarLado(MapSite::Direction::East, room);
   this->serializarLado(MapSite::Direction::West, room);
+  serializacion = serializacion + "\n\t}"; // finaliza el serializado de room
 }
 
 void ConstructorSerializadorJSON::serializarLado(MapSite::Direction direction, Room* room) {
