@@ -31,7 +31,7 @@ ConstructorSerializadorJSON::~ConstructorSerializadorJSON()
 
 void ConstructorSerializadorJSON::inicioObjeto(string nombreObjeto = "") {
 	serializacion = '{';
-  serializacion = serializacion + "\n\t" + nombreObjeto + ':';
+  serializacion = serializacion + "\n\t" + nombreObjeto + ' :';
 }
 
 
