@@ -11,6 +11,7 @@ public:
     Room* getFirstRoom();
     Room* getSecondRoom();
     Room* OtherSideFrom(Room*);
+    void setRooms(Room* f, Room* s);
     bool isOpen();
 private:
     Room* _room1;
@@ -23,6 +24,11 @@ Door::Door(Room* f, Room* s): _room1(s), _room2(f) {
 
 Door::Door(const Door& orig) {
 
+}
+
+void Door::setRooms(Room* f, Room* s) {
+    this->_room1 = f;
+    this->_room2 = s;
 }
 
 Room* Door::getFirstRoom() {

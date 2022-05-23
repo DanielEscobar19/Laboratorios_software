@@ -1,6 +1,7 @@
 //
 //
 #include "Door.h"
+#include "Room.h"
 
 #include <sstream>
 using namespace std;
@@ -14,6 +15,7 @@ class EnchantedDoor : public Door {
 public:
 	using Door::Door;
 	EnchantedDoor();
+	EnchantedDoor(Room* f, Room* s);
 	~EnchantedDoor();
 	void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
@@ -21,6 +23,11 @@ public:
 };
 
 EnchantedDoor::EnchantedDoor() {
+	MapSite::setType("puerta encantada");
+}
+
+EnchantedDoor::EnchantedDoor(Room* f, Room* s){
+	Door::setRooms(f, s);
 	MapSite::setType("puerta encantada");
 }
 
