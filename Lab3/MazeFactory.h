@@ -11,7 +11,7 @@ class MazeFactory {
 public:
 	virtual Maze* createMaze() = 0;
 	virtual Wall* createWall() = 0;
-	virtual Door* createDoor() = 0;
+	virtual Door* createDoor(Room* r1, Room* r2) = 0;
 	virtual Room* createRoom() = 0;
 };
 

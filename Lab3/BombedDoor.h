@@ -8,6 +8,7 @@ using namespace std;
 
 class BombedDoor : public Door {
 public:
+	using Door::Door;
 	BombedDoor();
 	~BombedDoor();
 	void getAtributos(vector< pair< string, string > >& vectorValores) override;

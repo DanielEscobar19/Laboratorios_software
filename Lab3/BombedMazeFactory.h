@@ -10,7 +10,7 @@ class BombedMazeFactory : public MazeFactory {
 public:
 	Maze* createMaze();
 	Wall* createWall();
-	Door* createDoor();
+	Door* createDoor(Room* r1, Room* r2);
 	Room* createRoom();
 };
 
@@ -23,8 +23,8 @@ Wall* BombedMazeFactory::createWall() {
 	return new BombedWall();
 }
 
-Door* BombedMazeFactory::createDoor() {
-	return new BombedDoor();
+Door* BombedMazeFactory::createDoor(Room* r1, Room* r2) {
+	return new BombedDoor(r1, r2);
 }
 
 Room* BombedMazeFactory::createRoom() {

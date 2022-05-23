@@ -12,7 +12,7 @@ class EnchantedMazeFactory : public MazeFactory {
 public:
 	Maze* createMaze();
 	Wall* createWall();
-	Door* createDoor();
+	Door* createDoor(Room* r1, Room* r2);
 	Room* createRoom();
 };
 
@@ -24,8 +24,8 @@ Wall* EnchantedMazeFactory::createWall() {
 	return new EnchantedWall();
 }
 
-Door* EnchantedMazeFactory::createDoor() {
-	return new EnchantedDoor();
+Door* EnchantedMazeFactory::createDoor(Room* r1, Room* r2) {
+	return new EnchantedDoor(r1, r2);
 }
 
 Room* EnchantedMazeFactory::createRoom() {

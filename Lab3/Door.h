@@ -18,7 +18,7 @@ private:
     bool _isOpen;
 };
 
-Door::Door(Room* f, Room* s): _room1(f), _room2(f) {
+Door::Door(Room* f, Room* s): _room1(s), _room2(f) {
 }
 
 Door::Door(const Door& orig) {

@@ -1,9 +1,11 @@
 #include <sstream>
+#include <random>
+#include <vector>
+
 using namespace std;
 
 #include "Maze.h"
 #include "MazeFactory.h"
-#include "EnchantedMazeFactory.h"
 #ifndef MAZEGAME_H
 #define	MAZEGAME_H
 
@@ -18,6 +20,8 @@ public:
     Maze * getAtributtes();
 private:
     Maze* aMaze;
+	void fillRoom(Room* room, Door* d1, Door* d2, int entrance, int exit, MazeFactory* f);
+	int findEntrance(int exit);
 };
 
 
@@ -31,32 +35,32 @@ MazeGame::~MazeGame() {
 }
 
 Maze* MazeGame::createMaze(MazeFactory* f) {
-    aMaze = f->createMaze();
-
-    Room* r1 = f->createRoom(); //new Room(1);
-    Room* r2 = f->createRoom(); //new Room(2);
-    Door* theDoor = f->createDoor(); //new Door(r1,r2);
-
-    aMaze->AddRoom(r1);
-    aMaze->AddRoom(r2);
-
-
-    //r1->SetSide(MapSite::North, new Wall());
-    r1->SetSide(MapSite::North, f->createWall());
-
-    r1->SetSide(MapSite::East, theDoor);
-
-    //r1->SetSide(MapSite::South, new Wall());
-    r1->SetSide(MapSite::South, f->createWall());
-
-    //r1->SetSide(MapSite::West, new Wall());
-    r1->SetSide(MapSite::West, f->createWall());
-
-    r2->SetSide(MapSite::North, f->createWall());
-    r2->SetSide(MapSite::East, f->createWall());
-    r2->SetSide(MapSite::South, f->createWall());
-    r2->SetSide(MapSite::West, theDoor);
-
+	aMaze = f->createMaze();
+	vector<Room*> rooms;
+	vector<Door*> doors;
+	
+	// Se crean los cuartos
+	for (int i = 0; i < 7; ++i){
+		rooms.push_back(f->createRoom());
+    }
+	
+	// Se crean las puertas
+	doors.push_back(f->createDoor(NULL, rooms[0]));
+	for (int i = 0; i < 6; ++i){
+		doors.push_back(f->createDoor(rooms[i], rooms[(i+1)]));
+    }
+	doors.push_back(f->createDoor(rooms[6], NULL));
+	
+	// Se unen las puertas con los cuartos y se crean los walls
+	int entrance = rand() % 4;
+	int exit = 0;
+	for (int i = 0; i < 7; ++i){
+		exit = (entrance + rand() % 3 + 1) % 4;
+		fillRoom(rooms[i], doors[i], doors[(i+1)], entrance, exit, f);
+		aMaze->AddRoom(rooms[i]);
+		entrance = findEntrance(exit);
+    }
+    
     return aMaze;
 }
 
@@ -65,6 +69,39 @@ string MazeGame::toString()
     ostringstream s;
     s << aMaze->toString();
     return s.str();
+}
+
+void MazeGame::fillRoom(Room* room, Door* d1, Door* d2, int entrance, int exit, MazeFactory* f){
+	for (int i = 0; i < 4; ++i){
+		
+		if (entrance == i){
+			room->SetSide(static_cast<MapSite::Direction>(i), d1);
+		}else if (exit == i){
+			room->SetSide(static_cast<MapSite::Direction>(i), d2);
+		}else{
+			room->SetSide(static_cast<MapSite::Direction>(i), f->createWall());
+		}
+	}
+}
+
+int MazeGame::findEntrance(int exit){
+	switch(exit) {
+		case 0:
+			return 1;
+			break;
+			
+		case 1:
+			return 0;
+			break;
+			
+		case 2:
+			return 3;
+			break;
+			
+		case 3:
+			return 2;
+			break;
+	}
 }
 
 Maze * MazeGame::getAtributtes() {

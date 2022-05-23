@@ -12,6 +12,7 @@ using namespace std;
 
 class EnchantedDoor : public Door {
 public:
+	using Door::Door;
 	EnchantedDoor();
 	~EnchantedDoor();
 	void getAtributos(vector< pair< string, string > >& vectorValores) override;
