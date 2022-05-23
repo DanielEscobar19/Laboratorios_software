@@ -20,6 +20,9 @@
 using namespace std;
 
 string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze* maze);
+void elegirFabrica(EnchantedMazeFactory& enchantedFactory, BombedMazeFactory& BombedFactory, MazeGame& mazeGame);
+
+void elegirFormato(ConstructorSerializadorJSON& json, ConstructorSerializadorXML& xml, MazeGame& mazeGame);
 
 /*
  * 
@@ -27,43 +30,14 @@ string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze* ma
 int main(int argc, char** argv) {
     EnchantedMazeFactory enchantedFactory;
     BombedMazeFactory BombedFactory;
-    MazeGame mazeGame1;
-    MazeGame mazeGame2;
-    /* pedir al usuario el tipo de laberinto */
+    MazeGame mazeGame;
 
-    int opcionDeUsuario = 0;
-    cout << "\nSeleccione el tipo de laberinto" << endl;
-    cout << "1. Laberinto encantado" << endl;
-    cout << "2. Laberinto con bombas" << endl;
-    cout << " > ";
-    cin >> opcionDeUsuario;
     ConstructorSerializadorJSON json;
     ConstructorSerializadorXML xml;
-    while(true) {
-        if (opcionDeUsuario >= 1 && opcionDeUsuario <= 2) {
-            if (opcionDeUsuario == 1) {
-                cout << "--------------------------------------" << endl;
-                // si el usuario escoge laberinto encantado
-                mazeGame1.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
-                cout << mazeGame1.toString() << endl;
-                cout << director(json, mazeGame1.getAtributtes()) << endl;
-                cout << director(xml, mazeGame1.getAtributtes()) << endl;
-            }
-            else {
-                cout << "--------------------------------------" << endl;
-                // si el usuario escoge laberinto con bombas
-                mazeGame2.createMaze(&BombedFactory);  // 7 rooms. Cada room con 2 puertas.
-                cout << mazeGame2.toString() << endl;
-                cout << director(json, mazeGame2.getAtributtes()) << endl;
-                cout << director(xml, mazeGame2.getAtributtes()) << endl;
-            }
-            break;
-        }
-        else {
-            cout << "Ingrese 1 o 2\n > ";
-            cin >> opcionDeUsuario;
-        }
-    }
+    elegirFabrica(enchantedFactory, BombedFactory, mazeGame);
+    elegirFormato(json, xml, mazeGame);
+    cout << "----------------------------------------------------------------------------" << endl;
+    
     return 0;
 }
 
@@ -75,4 +49,56 @@ string director(ConstructorSerializadorAbstracto& constructorAbstracto, Maze * m
     }
     constructorAbstracto.finObjeto();
     return constructorAbstracto.obtSerializacion();
+}
+
+// escoge tipo de laberinto
+void elegirFabrica(EnchantedMazeFactory& enchantedFactory, BombedMazeFactory& BombedFactory, MazeGame& mazeGame) {
+    /* pedir al usuario el tipo de laberinto */
+
+    int opcionDeUsuario = 0;
+    cout << "\nSeleccione el tipo de laberinto\n1. Laberinto encantado\n2. Laberinto con bombas\n > ";
+    cin >> opcionDeUsuario;
+   
+    while(true) {
+        if (opcionDeUsuario >= 1 && opcionDeUsuario <= 2) {
+            cout << "----------------------------------------------------------------------------" << endl;
+            if (opcionDeUsuario == 1) { // si el usuario escoge laberinto encantado
+                mazeGame.createMaze(&enchantedFactory);  // 7 rooms. Cada room con 2 puertas.
+            }
+            else { // si el usuario escoge laberinto con bombas
+                mazeGame.createMaze(&BombedFactory);  // 7 rooms. Cada room con 2 puertas.
+            }
+            cout << mazeGame.toString() << endl;
+            break;
+        }
+        else {
+            cout << "Ingrese 1 o 2\n > ";
+            cin >> opcionDeUsuario;
+        }
+    }
+}
+
+// escoge formato de guardado
+void elegirFormato(ConstructorSerializadorJSON& json, ConstructorSerializadorXML& xml, MazeGame& mazeGame) {
+    /* pedir al usuario el tipo de laberinto */
+    int opcionDeUsuario = 0;
+    cout << "----------------------------------------------------------------------------" << endl;
+    cout << "Juego de laberinto creado: 7 salas creadas con 2 puertas cada una.\nSeleccione el formato de guardado.\n1. JSON\n2. XML\n > ";
+    cin >> opcionDeUsuario;
+    while(true){
+        if (opcionDeUsuario >= 1 && opcionDeUsuario <= 2) {
+            cout << "----------------------------------------------------------------------------" << endl;
+            if (opcionDeUsuario == 1) {  // selecciona json
+                cout << director(json, mazeGame.getAtributtes()) << endl;
+            }
+            else {  // selecciona xml
+                cout << director(xml, mazeGame.getAtributtes()) << endl;
+            }
+            break;
+        }
+        else {
+            cout << "Ingrese 1 o 2\n > ";
+            cin >> opcionDeUsuario;
+        }
+    }
 }
