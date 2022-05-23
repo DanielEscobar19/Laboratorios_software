@@ -77,7 +77,7 @@ void ConstructorSerializadorXML::serializarDoor(Door* door) {
   vector<pair<string, string >> atributos;
   door->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "<Door ";
+  serializacion += "\t\t<Door ";
   while(it != atributos.end()){
     serializacion += it->first + "=\"" + it->second + "\"";
     it++;
@@ -85,14 +85,14 @@ void ConstructorSerializadorXML::serializarDoor(Door* door) {
       serializacion += ", ";
     }
   }
-  serializacion += "</Door>";
+  serializacion += "</Door>\n";
 }
 
 void ConstructorSerializadorXML::serializarWall(Wall* wall) {
   vector<pair<string, string >> atributos;
   wall->getAtributos(atributos);
   vector<pair<string, string >>::iterator it = atributos.begin();
-  serializacion += "<Wall ";
+  serializacion += "\t\t<Wall ";
   while(it != atributos.end()){
     serializacion += it->first + "=\"" + it->second + "\"";
     it++;
@@ -100,7 +100,7 @@ void ConstructorSerializadorXML::serializarWall(Wall* wall) {
       serializacion += ", ";
     }
   }
-  serializacion += "</Wall>";
+  serializacion += "</Wall>\n";
 }
 
 string ConstructorSerializadorXML::obtSerializacion() {
