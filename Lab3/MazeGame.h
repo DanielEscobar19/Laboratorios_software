@@ -102,6 +102,7 @@ int MazeGame::findEntrance(int exit){
 			return 2;
 			break;
 	}
+	return 0;
 }
 
 Maze * MazeGame::getAtributtes() {

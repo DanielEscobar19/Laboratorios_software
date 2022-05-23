@@ -10,6 +10,7 @@ class BombedDoor : public Door {
 public:
 	using Door::Door;
 	BombedDoor();
+	BombedDoor(Room* f, Room* s);
 	~BombedDoor();
 	void getAtributos(vector< pair< string, string > >& vectorValores) override;
 
@@ -28,6 +29,11 @@ BombedDoor::BombedDoor()
 
 BombedDoor::~BombedDoor()
 {
+}
+
+BombedDoor::BombedDoor(Room* f, Room* s){
+	Door::setRooms(f, s);
+	MapSite::setType("puerta con bomba");
 }
 
 void BombedDoor::enter()
