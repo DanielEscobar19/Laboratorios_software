@@ -45,11 +45,11 @@ Maze* MazeGame::createMaze(MazeFactory* f) {
     }
 	
 	// Se crean las puertas
-	doors.push_back(f->createDoor(NULL, rooms[0]));
+	doors.push_back(f->createDoor(rooms[6], rooms[0]));
 	for (int i = 0; i < 6; ++i){
 		doors.push_back(f->createDoor(rooms[i], rooms[(i+1)]));
     }
-	doors.push_back(f->createDoor(rooms[6], NULL));
+	doors.push_back(f->createDoor(rooms[6], rooms[0]));
 	
 	// Se unen las puertas con los cuartos y se crean los walls
 	int entrance = rand() % 4;
