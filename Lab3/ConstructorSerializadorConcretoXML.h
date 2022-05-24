@@ -43,7 +43,7 @@ void ConstructorSerializadorXML::serializarRoom(Room* room) {
 
 	serializacion = serializacion + "\n\t<Room";
 	serializacion = serializacion + " type" + '=' + '\"' + room->getType() + '\"';
-	serializacion = serializacion + " id" + '=' + '\"' + to_string(room->getId()) + '\"' + '>';
+	serializacion = serializacion + " id" + '=' + '\"' + to_string(room->getId()) + '\"' + ">\n";
 	this->serializarLado(MapSite::Direction::North, room);
   this->serializarLado(MapSite::Direction::South, room);
   this->serializarLado(MapSite::Direction::East, room);
