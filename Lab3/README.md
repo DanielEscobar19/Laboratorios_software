@@ -10,16 +10,15 @@ g++ main.cpp -o program
 
 ## Uso del programa
 
-Al principioo se pide digitar 1 o 2 para escoger el tipo de laberinto.
+Al principio se pide digitar 1 o 2 para escoger el tipo de laberinto.
 
     1: Es laberinto encantado
-    2: es laberinto con bombas
+    2: Es laberinto con bombas
 
-Luego de mostrar la constucción del laberinto se pide digitar 1 o 2 para escoger en que formtao se desea serializar el laberinto.
+Luego de mostrar la construcción del laberinto se pide digitar 1 o 2 para escoger en que formato se desea serializar el laberinto.
 
     1: Formato Json
     2: Formato XML
-
 
 ## Créditos
 
