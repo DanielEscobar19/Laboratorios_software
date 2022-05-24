@@ -8,7 +8,6 @@ using namespace std;
 
 class BombedDoor : public Door {
 public:
-	using Door::Door;
 	BombedDoor();
 	BombedDoor(Room* f, Room* s);
 	~BombedDoor();

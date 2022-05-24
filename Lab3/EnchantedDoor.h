@@ -13,7 +13,6 @@ using namespace std;
 
 class EnchantedDoor : public Door {
 public:
-	using Door::Door;
 	EnchantedDoor();
 	EnchantedDoor(Room* f, Room* s);
 	~EnchantedDoor();
