@@ -1,0 +1,44 @@
+Métodos plantilla en c++ y en python
+
+template < typename T, class F >
+vector< vector< T > > carga_valida_datos(ifstream& archivo, F t) throw (invalid_argument, out_of_range)
+{
+    vector< vector< T > > valores;
+    vector< T > linea_valores;
+    string linea;
+    while (getline(archivo,linea)) {
+        linea_valores.clear();
+        stringstream ss(linea);
+        string numero_S;
+        T numero_T;
+        while (getline(ss, numero_S, ',')) {
+			try {
+				numero_T = t(numero_S);
+			}
+			catch (exception e) {
+				throw e;
+			}
+            linea_valores.push_back(numero_T);
+        }
+        valores.push_back(linea_valores);
+    }
+    return valores;
+}
+
+## EFE: lee un archivo csv con numeros separados por coma y retorna una lista 
+## de listas de numeros de tipo tn.
+def lee_numeros_csv(archivo,tn):
+	lista = []
+	read_csv = csv.reader(archivo, delimiter=',')
+	for row in read_csv:
+		sublista = []
+		for n in row:
+			try:
+				if (tn == Tipos_numeros.int):
+					sublista.append(int(n))
+				else: 
+					sublista.append(float(n))
+			except ValueError as error_de_valor:
+				print("Error de tipo de valor: {0}".format(error_de_valor))
+		lista.append(sublista)
+	return lista
