@@ -178,12 +178,6 @@
   <object id="mrjhUfScxkO53Hj6gZMQWQ" type="umloperation.uml"/>
   <object id="hSyt/yEaNECF/A6WjAmpgw" type="umlparameter.uml"/>
   <object id="wLyKWeSzo0SrjnakPDnRuA" type="umloperation.uml"/>
-  <object id="Sot90blhzEyTirtVxDGywQ" type="umloperation.uml"/>
-  <object id="5/gV8pJ7ZU6Fa/npEnYqWg" type="umlparameter.uml"/>
-  <object id="c/ATTAFXAE6LBKUQ0NOQYQ" type="umloperation.uml"/>
-  <object id="mcaGM7+750yN7t3WlDwldg" type="umlparameter.uml"/>
-  <object id="lTtQ4X3aV0i8N9TyMXulNA" type="umloperation.uml"/>
-  <object id="Z5d0gA4Rq02zTtAcLehcQw" type="umlparameter.uml"/>
  </objects>
  <relations>
   <relation from="ViTTKs64lEWfStj1n97eeg" id="0ONS/bgew0GzxAUQelDjHQ" to="fD72c3tlGkOop1R+UxMABQ" type="umlgeneralization.model.model.uml"/>
@@ -418,12 +412,6 @@
   <reference from="bQ9v+jGCQk6m8DurPXadpQ" to="mrjhUfScxkO53Hj6gZMQWQ" type="classifier.operations.umlclassifier.umloperation.uml"/>
   <reference from="mrjhUfScxkO53Hj6gZMQWQ" to="hSyt/yEaNECF/A6WjAmpgw" type="operation.parameters.umloperation.umlparameter.uml"/>
   <reference from="bQ9v+jGCQk6m8DurPXadpQ" to="wLyKWeSzo0SrjnakPDnRuA" type="classifier.operations.umlclassifier.umloperation.uml"/>
-  <reference from="bQ9v+jGCQk6m8DurPXadpQ" to="Sot90blhzEyTirtVxDGywQ" type="classifier.operations.umlclassifier.umloperation.uml"/>
-  <reference from="Sot90blhzEyTirtVxDGywQ" to="5/gV8pJ7ZU6Fa/npEnYqWg" type="operation.parameters.umloperation.umlparameter.uml"/>
-  <reference from="bQ9v+jGCQk6m8DurPXadpQ" to="c/ATTAFXAE6LBKUQ0NOQYQ" type="classifier.operations.umlclassifier.umloperation.uml"/>
-  <reference from="c/ATTAFXAE6LBKUQ0NOQYQ" to="mcaGM7+750yN7t3WlDwldg" type="operation.parameters.umloperation.umlparameter.uml"/>
-  <reference from="SMBn3+kzy0etj7N2fIxOEw" to="lTtQ4X3aV0i8N9TyMXulNA" type="classifier.operations.umlclassifier.umloperation.uml"/>
-  <reference from="lTtQ4X3aV0i8N9TyMXulNA" to="Z5d0gA4Rq02zTtAcLehcQw" type="operation.parameters.umloperation.umlparameter.uml"/>
  </references>
  <object-values>
   <value-owner id="G3pmH01C6U2yDXFq4cT9Vg">
@@ -540,8 +528,8 @@
    <value name="order">7</value>
   </value-owner>
   <value-owner id="N+6Z9L3Wo0mF6+Ps5VelHg">
-   <value name="rendering">{&quot;bounds&quot;: &quot;921,422,254,178&quot;,&quot;model&quot;: &quot;SMBn3+kzy0etj7N2fIxOEw&quot;,&quot;name&quot;: &quot;MM&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;921,422,254,178&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;994,427,109,13&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL Compuesto&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1038,440,20,13&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;MM&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;921,458,254,19&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;926,461,157,13&quot;,&quot;text&quot;: &quot;-miembros: vector&lt;Monstruo *&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;921,477,254,123&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;926,480,59,13&quot;,&quot;text&quot;: &quot;+MM(id: int)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,493,195,13&quot;,&quot;text&quot;: &quot;+agregarMiembro(Miembro: Monstruo *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,506,185,13&quot;,&quot;text&quot;: &quot;+quitarMiembro(Miembro: Monstruo *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,519,202,13&quot;,&quot;text&quot;: &quot;-verficarTipo(monstruo: Monstruo *): bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,532,151,13&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente *): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,545,88,13&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,558,103,13&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,571,107,13&quot;,&quot;text&quot;: &quot;+pertenencia(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;926,584,172,13&quot;,&quot;text&quot;: &quot;+entregarMensaje(mensaje: string)&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
-   <value name="bounds">921,422,254,178</value>
+   <value name="rendering">{&quot;bounds&quot;: &quot;941,395,254,176&quot;,&quot;model&quot;: &quot;SMBn3+kzy0etj7N2fIxOEw&quot;,&quot;name&quot;: &quot;MM&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;941,395,254,176&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;1014,400,109,13&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL Compuesto&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;1058,413,20,13&quot;,&quot;fontStyle&quot;: &quot;2&quot;,&quot;text&quot;: &quot;MM&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;941,431,254,19&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;946,434,157,13&quot;,&quot;text&quot;: &quot;-miembros: vector&lt;Monstruo *&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;941,450,254,121&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;946,453,59,13&quot;,&quot;text&quot;: &quot;+MM(id: int)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,466,195,13&quot;,&quot;text&quot;: &quot;+agregarMiembro(Miembro: Monstruo *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,479,185,13&quot;,&quot;text&quot;: &quot;+quitarMiembro(Miembro: Monstruo *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,492,202,13&quot;,&quot;text&quot;: &quot;-verficarTipo(monstruo: Monstruo *): bool&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,505,151,13&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente *): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,518,88,13&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,531,103,13&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;946,544,107,13&quot;,&quot;text&quot;: &quot;+pertenencia(): string&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
+   <value name="bounds">941,395,254,176</value>
   </value-owner>
   <value-owner id="b9+PAUzjW0yAW9ZUsi+cmQ">
    <value name="name">Agente</value>
@@ -795,8 +783,8 @@
    <value name="order">8</value>
   </value-owner>
   <value-owner id="MRXdUDETlEWll2GK0/ABLA">
-   <value name="rendering">{&quot;model&quot;: &quot;1R94AGEAa0mEX6jYI4W52Q&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;740,692,1020,690,1034,599,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;1034,585,14,28&quot;,&quot;path&quot;: &quot;shapes/composition.png&quot;,&quot;rotate&quot;: &quot;87&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLCompositionView&quot;}</value>
-   <value name="points">740,692,1020,690,1034,599,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;1R94AGEAa0mEX6jYI4W52Q&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;740,692,1020,690,1047,570,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;1047,556,14,28&quot;,&quot;path&quot;: &quot;shapes/composition.png&quot;,&quot;rotate&quot;: &quot;126&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLCompositionView&quot;}</value>
+   <value name="points">740,692,1020,690,1047,570,</value>
    <value name="tail-style">shapes/composition.png</value>
   </value-owner>
   <value-owner id="s7gkMrZP7UKeacjglkY9SA">
@@ -851,7 +839,7 @@
    <value name="name">toNameView</value>
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">990,630,47,13</value>
+   <value name="bounds">1001,600,47,13</value>
    <value name="anchor">18</value>
    <value name="anchor-offset">40,15</value>
    <value name="text-align">132</value>
@@ -863,7 +851,7 @@
    <value name="name">toMultiView</value>
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">1012,615,69,13</value>
+   <value name="bounds">1023,587,69,13</value>
    <value name="anchor">18</value>
    <value name="anchor-offset">20,-15</value>
    <value name="text-align">132</value>
@@ -895,7 +883,7 @@
   <value-owner id="D5LpNojT7kCmKniMy6kNUg">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">1027,600,15,11</value>
+   <value name="bounds">1040,571,15,11</value>
    <value name="anchor">22</value>
    <value name="autosize">true</value>
    <value name="movable">false</value>
@@ -914,8 +902,8 @@
    <value name="sub-on-edit-text">uml.onEditAttribute(view, model, text)</value>
   </value-owner>
   <value-owner id="kQfyRLnbR0WxeXY0GPclqg">
-   <value name="rendering">{&quot;model&quot;: &quot;V/RzVAYBgUmhKEwnFpY6DA&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;363,741,360,780,1070,780,1055,599,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;1055,585,14,28&quot;,&quot;path&quot;: &quot;shapes/composition.png&quot;,&quot;rotate&quot;: &quot;-47&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLCompositionView&quot;}</value>
-   <value name="points">363,741,360,780,1070,780,1055,599,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;V/RzVAYBgUmhKEwnFpY6DA&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;363,741,360,780,1070,780,1068,570,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;1068,556,14,28&quot;,&quot;path&quot;: &quot;shapes/composition.png&quot;,&quot;rotate&quot;: &quot;-5&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLCompositionView&quot;}</value>
+   <value name="points">363,741,360,780,1070,780,1068,570,</value>
    <value name="tail-style">shapes/composition.png</value>
   </value-owner>
   <value-owner id="C4+WPVsgok+hlQwcxQO2kQ">
@@ -970,7 +958,7 @@
    <value name="name">toNameView</value>
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">1020,634,47,13</value>
+   <value name="bounds">1030,604,47,13</value>
    <value name="anchor">18</value>
    <value name="anchor-offset">40,15</value>
    <value name="text-align">132</value>
@@ -982,7 +970,7 @@
    <value name="name">toMultiView</value>
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">1038,612,69,13</value>
+   <value name="bounds">1049,584,69,13</value>
    <value name="anchor">18</value>
    <value name="anchor-offset">20,-15</value>
    <value name="text-align">132</value>
@@ -1014,7 +1002,7 @@
   <value-owner id="B8X5mOfzy0CQO65+0MIxug">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">1048,600,15,11</value>
+   <value name="bounds">1061,571,15,11</value>
    <value name="anchor">22</value>
    <value name="autosize">true</value>
    <value name="movable">false</value>
@@ -1059,17 +1047,17 @@
    <value name="isAbstract">true</value>
   </value-owner>
   <value-owner id="vrAQpdrnAEq/adyksmYMfg">
-   <value name="rendering">{&quot;bounds&quot;: &quot;374,383,231,217&quot;,&quot;model&quot;: &quot;bQ9v+jGCQk6m8DurPXadpQ&quot;,&quot;name&quot;: &quot;Monstruo&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;374,383,231,217&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;439,388,101,13&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL abstracto&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;463,401,54,13&quot;,&quot;fontStyle&quot;: &quot;3&quot;,&quot;text&quot;: &quot;Monstruo&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;374,419,231,32&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;379,422,98,13&quot;,&quot;text&quot;: &quot;+manada: MM * = 0&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,435,57,13&quot;,&quot;text&quot;: &quot;+danyo: int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;374,451,231,149&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;379,454,139,13&quot;,&quot;text&quot;: &quot;+setManada(manada: MM *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,467,148,13&quot;,&quot;text&quot;: &quot;+unsetManada(manada: MM*)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,480,103,13&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,493,115,13&quot;,&quot;text&quot;: &quot;#pertenencia(): string()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,506,149,13&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente*): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,519,89,13&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,532,82,13&quot;,&quot;text&quot;: &quot;+getDanyo(): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,545,153,13&quot;,&quot;text&quot;: &quot;+setPtrManada(manada: MM *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,558,70,13&quot;,&quot;text&quot;: &quot;+nullManada()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,571,160,13&quot;,&quot;text&quot;: &quot;+enviarMensaje(mensaje: string)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,584,119,13&quot;,&quot;text&quot;: &quot;+recibir(mensaje: string)&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
-   <value name="bounds">374,383,231,217</value>
+   <value name="rendering">{&quot;bounds&quot;: &quot;374,385,187,191&quot;,&quot;model&quot;: &quot;bQ9v+jGCQk6m8DurPXadpQ&quot;,&quot;name&quot;: &quot;Monstruo&quot;,&quot;render&quot;: [{&quot;bounds&quot;: &quot;374,385,187,191&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;417,390,101,13&quot;,&quot;text&quot;: &quot;&lt;&lt;ROL abstracto&gt;&gt;&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;441,403,54,13&quot;,&quot;fontStyle&quot;: &quot;3&quot;,&quot;text&quot;: &quot;Monstruo&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;374,421,187,32&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;379,424,98,13&quot;,&quot;text&quot;: &quot;+manada: MM * = 0&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,437,57,13&quot;,&quot;text&quot;: &quot;+danyo: int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;374,453,187,123&quot;,&quot;fillColor&quot;: &quot;0,0,0,0&quot;,&quot;type&quot;: &quot;Rect&quot;},{&quot;bounds&quot;: &quot;379,456,139,13&quot;,&quot;text&quot;: &quot;+setManada(manada: MM *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,469,148,13&quot;,&quot;text&quot;: &quot;+unsetManada(manada: MM*)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,482,103,13&quot;,&quot;text&quot;: &quot;+setAtrapado(): void&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,495,115,13&quot;,&quot;text&quot;: &quot;#pertenencia(): string()&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,508,149,13&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+atacar(agente: Agente*): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,521,89,13&quot;,&quot;fontStyle&quot;: &quot;1&quot;,&quot;text&quot;: &quot;+toString(): string&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,534,82,13&quot;,&quot;text&quot;: &quot;+getDanyo(): int&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,547,153,13&quot;,&quot;text&quot;: &quot;+setPtrManada(manada: MM *)&quot;,&quot;type&quot;: &quot;Text&quot;},{&quot;bounds&quot;: &quot;379,560,70,13&quot;,&quot;text&quot;: &quot;+nullManada()&quot;,&quot;type&quot;: &quot;Text&quot;}],&quot;type&quot;: &quot;UMLClassView&quot;}</value>
+   <value name="bounds">374,385,187,191</value>
   </value-owner>
   <value-owner id="0zKaZC8/P0ip9/lt1ojb4Q">
-   <value name="rendering">{&quot;model&quot;: &quot;GjpQkrNzrUKRM8SmJBiEHg&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;921,432,809,362,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;809,350,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;-579&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
-   <value name="points">921,432,809,362,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;GjpQkrNzrUKRM8SmJBiEHg&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;941,418,809,351,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;809,339,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;-630&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
+   <value name="points">941,418,809,351,</value>
   </value-owner>
   <value-owner id="4MqvRyWqn0CNfrEyh6OIvQ">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">839,404,36,13</value>
+   <value name="bounds">850,392,36,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-15</value>
    <value name="text-align">132</value>
@@ -1081,7 +1069,7 @@
   <value-owner id="1tI2EJ9/eUWPU8TeXdH8dA">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">802,416,95,13</value>
+   <value name="bounds">814,406,95,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-30</value>
    <value name="text-align">132</value>
@@ -1170,12 +1158,13 @@
   </value-owner>
   <value-owner id="zczkCsr5+EG8W3SmYn187g">
    <value name="name">manada</value>
+   <value name="order">2</value>
    <value name="type">MM *</value>
    <value name="initialValue">0</value>
   </value-owner>
   <value-owner id="nGKDq0lONESPJ/KhkR2q+Q">
    <value name="name">setManada</value>
-   <value name="order">1</value>
+   <value name="order">3</value>
   </value-owner>
   <value-owner id="I67ERkNR4Eyn/yP/6dX+Vw">
    <value name="name">manada</value>
@@ -1184,7 +1173,7 @@
   </value-owner>
   <value-owner id="QH9+0RUAaEaLjVSZSrtvTw">
    <value name="name">unsetManada</value>
-   <value name="order">2</value>
+   <value name="order">4</value>
   </value-owner>
   <value-owner id="4FDCrUKNvUivvdVh1vSbWQ">
    <value name="name">manada</value>
@@ -1203,13 +1192,13 @@
    <value name="returnType">int</value>
   </value-owner>
   <value-owner id="upo18/1nY0iFwFA5PyNEJg">
-   <value name="rendering">{&quot;model&quot;: &quot;7VLau/2NR0m/VyrzMCwl+Q&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;604,395,631,372,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;631,360,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;495&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
-   <value name="points">604,395,631,372,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;7VLau/2NR0m/VyrzMCwl+Q&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;560,413,619,371,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;619,359,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;545&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
+   <value name="points">560,413,619,371,</value>
   </value-owner>
   <value-owner id="1JJl+3Jz00Sngo0zYxjJ1g">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">590,367,36,13</value>
+   <value name="bounds">563,374,36,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-15</value>
    <value name="text-align">132</value>
@@ -1221,7 +1210,7 @@
   <value-owner id="4KwsPKguLk6ZhTSlk9A6YQ">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">552,355,95,13</value>
+   <value name="bounds">526,362,95,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-30</value>
    <value name="text-align">132</value>
@@ -1231,13 +1220,13 @@
    <value name="on-edit-text">uml.onEditStereotype(view, model, text)</value>
   </value-owner>
   <value-owner id="EeA1PJbgcUyN8cfbXBFlww">
-   <value name="rendering">{&quot;model&quot;: &quot;62HEsnq4VUaggVxjEHVaYQ&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;400,635,422,599,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;422,587,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;314&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
-   <value name="points">400,635,422,599,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;62HEsnq4VUaggVxjEHVaYQ&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;392,635,421,575,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;421,563,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;257&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
+   <value name="points">392,635,421,575,</value>
   </value-owner>
   <value-owner id="BKCCOxgNDkKlXNprdpFOYQ">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">380,603,36,13</value>
+   <value name="bounds">375,592,36,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-15</value>
    <value name="text-align">132</value>
@@ -1249,7 +1238,7 @@
   <value-owner id="ReUkSeILLkOtKXPHhyJ7RA">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">338,595,95,13</value>
+   <value name="bounds">333,586,95,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-30</value>
    <value name="text-align">132</value>
@@ -1259,13 +1248,13 @@
    <value name="on-edit-text">uml.onEditStereotype(view, model, text)</value>
   </value-owner>
   <value-owner id="wMkIZuydBkqpyn3KEYZaCw">
-   <value name="rendering">{&quot;model&quot;: &quot;DL08z0hij0WuFZAaZMi+GQ&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;599,635,572,599,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;572,587,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;-368&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
-   <value name="points">599,635,572,599,</value>
+   <value name="rendering">{&quot;model&quot;: &quot;DL08z0hij0WuFZAaZMi+GQ&quot;,&quot;name&quot;: &quot;&quot;,&quot;render&quot;: [{&quot;lineWidth&quot;: &quot;0&quot;,&quot;points&quot;: &quot;596,635,546,575,&quot;,&quot;type&quot;: &quot;Line&quot;},{&quot;bounds&quot;: &quot;546,563,17,24&quot;,&quot;path&quot;: &quot;:/images/dummy/arrow_triangle.svg&quot;,&quot;rotate&quot;: &quot;-398&quot;,&quot;type&quot;: &quot;EdgeEnd&quot;}],&quot;type&quot;: &quot;UMLGeneralizationView&quot;}</value>
+   <value name="points">596,635,546,575,</value>
   </value-owner>
   <value-owner id="GmtRwEAyYU6iAFxtJo+3Pg">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">556,620,36,13</value>
+   <value name="bounds">541,609,36,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-15</value>
    <value name="text-align">132</value>
@@ -1277,7 +1266,7 @@
   <value-owner id="d71obf+UJkmgLTQ5OzzxDg">
    <value name="selectable">true</value>
    <value name="visible">false</value>
-   <value name="bounds">515,629,95,13</value>
+   <value name="bounds">501,618,95,13</value>
    <value name="anchor">17</value>
    <value name="anchor-offset">0,-30</value>
    <value name="text-align">132</value>
@@ -1293,7 +1282,7 @@
   </value-owner>
   <value-owner id="QD7SZI1snk+q2w28+KZfPg">
    <value name="name">setAtrapado</value>
-   <value name="order">3</value>
+   <value name="order">5</value>
    <value name="returnType">void</value>
   </value-owner>
   <value-owner id="/JfnSRPoPkWr7wXpgddgAA">
@@ -1307,7 +1296,7 @@
   </value-owner>
   <value-owner id="jba0FS6haE27Au6dSH2ncA">
    <value name="name">pertenencia</value>
-   <value name="order">4</value>
+   <value name="order">6</value>
    <value name="visibility">2</value>
    <value name="returnType">string()</value>
   </value-owner>
@@ -1328,12 +1317,12 @@
   </value-owner>
   <value-owner id="lbWww0yzkkaZ2zsIgm8epA">
    <value name="name">danyo</value>
-   <value name="order">11</value>
+   <value name="order">7</value>
    <value name="type">int</value>
   </value-owner>
   <value-owner id="X4vNXT925EyrshuWlHfO9Q">
    <value name="name">atacar</value>
-   <value name="order">5</value>
+   <value name="order">8</value>
    <value name="isAbstract">true</value>
    <value name="returnType">int</value>
   </value-owner>
@@ -1344,13 +1333,13 @@
   </value-owner>
   <value-owner id="qqLwgD5gzE6J9ewN+MLCHA">
    <value name="name">toString</value>
-   <value name="order">6</value>
+   <value name="order">9</value>
    <value name="isAbstract">true</value>
    <value name="returnType">string</value>
   </value-owner>
   <value-owner id="rXMkjMlSJE+45DzDgHykYQ">
    <value name="name">getDanyo</value>
-   <value name="order">7</value>
+   <value name="order">10</value>
    <value name="returnType">int</value>
   </value-owner>
   <value-owner id="nmGdTIeOJkiTO5x+7vRbug">
@@ -1555,7 +1544,7 @@
   </value-owner>
   <value-owner id="mrjhUfScxkO53Hj6gZMQWQ">
    <value name="name">setPtrManada</value>
-   <value name="order">8</value>
+   <value name="order">11</value>
   </value-owner>
   <value-owner id="hSyt/yEaNECF/A6WjAmpgw">
    <value name="name">manada</value>
@@ -1564,34 +1553,7 @@
   </value-owner>
   <value-owner id="wLyKWeSzo0SrjnakPDnRuA">
    <value name="name">nullManada</value>
-   <value name="order">9</value>
-  </value-owner>
-  <value-owner id="Sot90blhzEyTirtVxDGywQ">
-   <value name="name">enviarMensaje</value>
-   <value name="order">10</value>
-  </value-owner>
-  <value-owner id="5/gV8pJ7ZU6Fa/npEnYqWg">
-   <value name="name">mensaje</value>
-   <value name="order">3</value>
-   <value name="type">string</value>
-  </value-owner>
-  <value-owner id="c/ATTAFXAE6LBKUQ0NOQYQ">
-   <value name="name">recibir</value>
-   <value name="order">14</value>
-  </value-owner>
-  <value-owner id="mcaGM7+750yN7t3WlDwldg">
-   <value name="name">mensaje</value>
-   <value name="order">2</value>
-   <value name="type">string</value>
-  </value-owner>
-  <value-owner id="lTtQ4X3aV0i8N9TyMXulNA">
-   <value name="name">entregarMensaje</value>
-   <value name="order">11</value>
-  </value-owner>
-  <value-owner id="Z5d0gA4Rq02zTtAcLehcQw">
-   <value name="name">mensaje</value>
-   <value name="order">3</value>
-   <value name="type">string</value>
+   <value name="order">12</value>
   </value-owner>
  </object-values>
  <relation-values/>
