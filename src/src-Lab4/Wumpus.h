@@ -12,7 +12,5 @@ class Wumpus: public Monstruo {
         Wumpus(int id = 0, MM * manada = nullptr);
         int atacar(Agente * agente);
         string toString();
-
-
 };
 #endif  // WUMPUS_H

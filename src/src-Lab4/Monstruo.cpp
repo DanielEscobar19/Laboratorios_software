@@ -46,14 +46,16 @@ string Monstruo::pertenencia() {
     tipo = tipo.substr(1,tipo.length());
     return tipo;
 }
+
+// se obvian las tildes en comentarios por errores de impresión.
 void Monstruo::enviarMensaje(string mensaje) {
-    if (manada) {
-        manada->entregarMensaje(mensaje, this->id);
+    if (this->manada) {
+        this->manada->entregarMensaje(mensaje, this->id);
     } else {
-        cout << "El monstruo #" << this->id << " no puede enviar mensajes porque no pertenece a ninguna manada" << endl;
+        cout << "Monstruo {" << this->id << "} no puede enviar mensajes. No tiene manada" << endl;
     }
 }
 
 void Monstruo::recibirMensaje(string mensaje) {
-    cout << "El monstruo #" << this->id << " recibio el mensaje: " << mensaje << endl;
+    cout << "Monstruo {" << this->id << "} recibio el mensaje: " << mensaje << endl;
 }
