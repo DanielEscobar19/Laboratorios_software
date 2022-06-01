@@ -30,3 +30,13 @@ Doble Doble::operator/(const Doble & otro) {
   Doble result(this->valor / otro.valor);
   return result;
 }
+
+istream& Doble::cargar(istream & entrada) {
+  entrada >> this->valor;
+  return entrada;
+}
+
+ostream& Doble::toString(ostream & salida) {
+  salida << this->valor;
+  return salida;
+}
