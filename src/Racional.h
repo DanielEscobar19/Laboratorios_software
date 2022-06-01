@@ -1,10 +1,11 @@
 #ifndef _RACIONAL
 #define _RACIONAL
 
+#include "Operando.h"
 #include<iostream>
 using namespace std;
 
-class Racional {
+class Racional : public Operando {
 
    // LOS METODOS friend AMIGOS NO PERTENECEN A LA CLASE
    friend istream & operator>>(istream & entrada, Racional & racional){
@@ -15,8 +16,8 @@ class Racional {
    }
 
    private:
-      int num;
-      int den;
+      int numerador;
+      int denominador;
 
       Racional& _init(int,int); 
       int _mcd(int,int);
