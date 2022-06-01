@@ -1,108 +1,34 @@
-#include<iostream>
-using namespace std;
 #include "Racional.h"
 
-int main(){
-   Racional x;
-   Racional y;
-   Racional suma;
-   Racional resta;
-   Racional producto;
-   Racional division;
+#include<iostream>
+using namespace std;
+
+void probarRacional() {
+   cout << "-------------------------------------------" << endl;
+   cout << "Prueba de racional:\n" << endl;
+   Racional y(5,2), z(2,6);
+   cout << "y: " << y << " | z: " << z << endl;
    
-   cout << "Digite un valor: ";
-   cin >> x;
-   cout << endl;
+   cout << "Operando sobre (y) y (z)" << endl;
+   Racional suma = y + z;
+   Racional resta = y - z;
+   Racional multiplicacion = y * z;
+   Racional division = y / z;
+   cout << "Suma: " << suma << "\nResta: " << resta << "\nMultiplicacion: " << multiplicacion << "\nDivision: " << division << endl;
 
-   cout << "Digite un valor: ";
-   cin >> y;
-   cout << endl;
 
-   suma = x + y;
-   resta = x - y;
-   producto = x * y;
-   if(y!=0) {
-      division = x / y;  
-   }
+   cout << "-------------------------------------------" << endl;
+}
 
-   cout << "X: ";
-   cout << x << endl; 
+void run() {
+   probarRacional();
+}
 
-   cout << "Y: ";
-   cout << y << endl;
+int main(){
+   cout << "\n    | Start |" << endl;
 
-   // Operador de comparación de igualdad == 
-   // es igual retorna 0 si no son iguales y !0 en caso contrario
-   if( x == y){ 
-      cout << "X y Y son iguales" << endl;
-   }
-   cout << "Suma:";
-   cout << suma << endl;
-
-   cout << "Resta:";
-   cout << resta << endl;
-
-   cout << "Producto:";
-   cout << producto << endl;
-   if(y!=0){
-      cout << "Division:";
-      cout << division << endl;
-   }
-   cout << "X = 1" << endl;
-   x = 1;
-   cout << "Después y = ++x :"<< endl;
-
-   y = ++x; // preincremento
-
-   cout << "X: ";
-   cout << x << endl;
-
-   cout << "Y: ";
-   cout << y << endl;
-
-   cout << "X = 1" << endl;
-   x = 1;
-   cout << "Después y = x++ :"<< endl;
-
-   y = x++; // posincremento
-
-   cout << "X: ";
-   cout << x << endl;
-
-   cout << "Y: ";
-   cout << y << endl;
-
-   cout << "X = 1" << endl;
-   x = 1;
-   y = 2;
-   cout << "Si ejecuto x=1; y y=2; :";
-   cout << "Después x+=y :"<< endl;
-
-   x+= y; // masIgual
-
-   cout << "X: ";
-   cout << x << endl;
-
-   cout << "Y: ";
-   cout << y << endl;
-
-  cout << "X = 2 y Y= 3" << endl;
-   x = 2;
-   y = 3;
-   cout << "Después x*=y :"<< endl;
-
-   x*= y; // masIgual
-
-   cout << "X: ";
-   cout << x << endl;
-
-   cout << "Y: ";
-   cout << y << endl;
-
-//   cout << "Si imprimo directamente ++(x+=2) x vale: " << ++(x+=2) << " x="<< x << endl;
-
-   cout << "Si imprimo directamente ++(x+=2) = " << ++(x+=2) << endl;
-   cout << "X = "<< x << endl;
-
+   run();
+   
+   cout << "\n   | End |" << endl;
    return 0;
 }
