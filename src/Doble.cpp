@@ -11,32 +11,28 @@ string Doble::toString() {
   return to_string(this->valor);
 }
 
-Doble Doble::operator+(const Doble & otro ) {
-  Doble result(this->valor + otro.valor);
+Doble& Doble::operator+(Operando& otro ) {
+  Doble * doble = dynamic_cast<Doble*>(&otro);
+  static Doble result(this->valor + doble->valor);
+  return result;
+
+}
+
+Doble& Doble::operator-(Operando& otro ) {
+  Doble * doble = dynamic_cast<Doble*>(&otro);
+  static Doble result(this->valor - doble->valor);
   return result;
 }
 
-Doble Doble::operator-(const Doble & otro ) {
-  Doble result(this->valor - otro.valor);
+Doble& Doble::operator*(Operando& otro) {
+  Doble * doble = dynamic_cast<Doble*>(&otro);
+  static Doble result(this->valor * doble->valor);
   return result;
 }
 
-Doble Doble::operator*(const Doble & otro) {
-  Doble result(this->valor * otro.valor);
+Doble& Doble::operator/(Operando& otro) {
+  Doble * doble = dynamic_cast<Doble*>(&otro);
+  static Doble result(this->valor / doble->valor);
   return result;
 }
 
-Doble Doble::operator/(const Doble & otro) {
-  Doble result(this->valor / otro.valor);
-  return result;
-}
-
-istream& Doble::cargar(istream & entrada) {
-  entrada >> this->valor;
-  return entrada;
-}
-
-ostream& Doble::toString(ostream & salida) {
-  salida << this->valor;
-  return salida;
-}

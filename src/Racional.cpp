@@ -2,18 +2,13 @@
 #include<iostream>
 using namespace std;
 
-istream & Racional::cargar(istream & entrada){
-   entrada >> numerador;
-   entrada >> denominador;
-   _init(numerador,denominador);
-   return entrada;
-}
-ostream & Racional::toString(ostream & salida){
-   salida << numerador;
+string Racional::toString(){
+   string result = to_string(numerador);
+   
    if(denominador!=1){
-      salida << "/"<< denominador;
+      result = result + "/" + to_string(denominador);
    }
-   return salida;
+   return result;
 }
 
 Racional& Racional::_init(int numerador, int denominador){
@@ -55,22 +50,26 @@ Racional::Racional(int numerador, int denominador){
    _init(numerador,denominador);
 }
 
-Racional Racional::operator+(const Racional& otro){
-   Racional nuevo (this->numerador * otro.denominador + this->denominador * otro.numerador, this->denominador * otro.denominador);
-   return nuevo;
+Racional& Racional::operator+(Operando& otro) {
+   Racional * racional = dynamic_cast<Racional*>(&otro);
+   static Racional result(this->numerador * racional->denominador + this->denominador * racional->numerador, this->denominador * racional->denominador);
+   return result;
 }
 
-Racional Racional::operator-(const Racional& otro){	
-   Racional nuevo( numerador * otro.denominador - denominador * otro.numerador   , denominador * otro.denominador);
-   return nuevo;
+Racional& Racional::operator-(Operando& otro){	
+   Racional * racional = dynamic_cast<Racional*>(&otro);
+   static Racional result(numerador * racional->denominador - denominador * racional->numerador   , denominador * racional->denominador);
+   return result;
 }
 
-Racional Racional::operator*(const Racional & otro){
-   Racional nuevo( numerador * otro.numerador ,  denominador * otro.denominador);
-   return nuevo;
+Racional& Racional::operator*(Operando& otro){
+   Racional * racional = dynamic_cast<Racional*>(&otro);
+   static Racional result(numerador * racional->numerador ,  denominador * racional->denominador);
+   return result;
 }
       
-Racional Racional::operator/(const Racional & otro){
-   Racional nuevo (this->numerador*otro.denominador, this->denominador*otro.numerador); 
-   return nuevo;
+Racional& Racional::operator/(Operando& otro){
+   Racional * racional = dynamic_cast<Racional*>(&otro);
+   static Racional result(this->numerador*racional->denominador, this->denominador*racional->numerador); 
+   return result;
 }

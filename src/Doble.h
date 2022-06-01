@@ -5,7 +5,7 @@
 #include "Operando.h"
 using namespace std;
 
-class Doble: public Operando {
+class Doble : public Operando{
 	private:
 		double valor;
 
@@ -14,13 +14,10 @@ class Doble: public Operando {
 		Doble(double d);
 		~Doble();
 		string toString();
-		Doble operator+(const Doble &);
-		Doble operator-(const Doble &);
-		Doble operator*(const Doble &);
-		Doble operator/(const Doble &);
-		// Métodos usados por los friend para hacer entrada salida
-		virtual istream& cargar(istream &) override;
-		virtual ostream& toString(ostream &) override;
+		Doble& operator+(Operando &);
+		Doble& operator-(Operando &);
+		Doble& operator*(Operando &);
+		Doble& operator/(Operando &);
 };
 
 #endif

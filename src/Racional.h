@@ -3,18 +3,10 @@
 
 #include "Operando.h"
 #include<iostream>
+#include<string>
 using namespace std;
 
-class Racional : public Operando {
-
-   // LOS METODOS friend AMIGOS NO PERTENECEN A LA CLASE
-   friend istream & operator>>(istream & entrada, Racional & racional){
-       return racional.cargar(entrada);
-   }
-   friend ostream & operator<<(ostream & salida, Racional & racional){
-       return racional.toString(salida);
-   }
-
+class Racional : public Operando{
    private:
       int numerador;
       int denominador;
@@ -25,15 +17,12 @@ class Racional : public Operando {
 
    public:
       Racional(int,int);
+      string toString();
 
-      // Métodos usados por los friend para hacer entrada salida
-      istream& cargar(istream &);
-      ostream& toString(ostream &);
-
-      Racional operator+(const Racional&);
-      Racional operator-(const Racional&);
-      Racional operator*(const Racional&);
-      Racional operator/(const Racional&);
+      Racional& operator+(Operando&);
+      Racional& operator-(Operando&);
+      Racional& operator*(Operando&);
+      Racional& operator/(Operando&);
 
 };
 
