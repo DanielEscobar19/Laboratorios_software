@@ -3,43 +3,42 @@
 using namespace std;
 
 istream & Racional::cargar(istream & entrada){
-   entrada >> num;
-   entrada >> den;
-   _init(num,den);
+   entrada >> numerador;
+   entrada >> denominador;
+   _init(numerador,denominador);
    return entrada;
 }
-ostream & Racional::imprimir(ostream & salida){
-   salida << num;
-   if(den!=1){
-      salida << "/"<< den;
+ostream & Racional::toString(ostream & salida){
+   salida << numerador;
+   if(denominador!=1){
+      salida << "/"<< denominador;
    }
    return salida;
 }
 
-
-Racional& Racional::_init(int num, int den){
-   this->num = num;
-   if(den){
-      this->den = den;
+Racional& Racional::_init(int numerador, int denominador){
+   this->numerador = numerador;
+   if(denominador){
+      this->denominador = denominador;
    }
    else {
-      this->den = 1;
-      cerr << "Warning: Forzado denominador 0 a 1"<< endl;
+      this->denominador = 1;
+      cerr << "Warning: Forzado denominadorominador 0 a 1"<< endl;
    }
    _simplificar();
    return *this;
 }
       
 Racional& Racional::_simplificar(){
-   int x = _mcd(num,den);
-   num/=x;
-   den/=x;
-   if(den<0){
-      num*= -1.0;
-      den*= -1.0;
+   int x = _mcd(numerador,denominador);
+   numerador/=x;
+   denominador/=x;
+   if(denominador<0){
+      numerador*= -1.0;
+      denominador*= -1.0;
    }
    return *this;
-}      	
+}
 
 int Racional::_mcd(int x, int y){
     int resp;
@@ -52,74 +51,26 @@ int Racional::_mcd(int x, int y){
     return resp;
 }
 
-Racional::Racional(){
-   _init(0,1);
-}
-
-Racional::Racional(int num){ 
-   _init(num,1);
-} 
-
-Racional::Racional(int num, int den){
-   _init(num,den);
-}
-           
-int Racional::operator==(const Racional& otro ){
-   return (this->num == otro.num && this->den == otro.den);
-}
-
-int Racional::operator!=(const Racional& otro){
-   return !( *this == otro );
-}
-
-int Racional::operator!=(int x){
-   Racional otro(x);
-   return otro != *this;
+Racional::Racional(int numerador, int denominador){
+   _init(numerador,denominador);
 }
 
 Racional Racional::operator+(const Racional& otro){
-   Racional nuevo (this->num * otro.den + this->den * otro.num, this->den * otro.den);
+   Racional nuevo (this->numerador * otro.denominador + this->denominador * otro.numerador, this->denominador * otro.denominador);
    return nuevo;
 }
 
 Racional Racional::operator-(const Racional& otro){	
-   Racional nuevo( num * otro.den - den * otro.num   , den * otro.den);
+   Racional nuevo( numerador * otro.denominador - denominador * otro.numerador   , denominador * otro.denominador);
    return nuevo;
 }
 
 Racional Racional::operator*(const Racional & otro){
-   Racional nuevo( num * otro.num ,  den * otro.den);
+   Racional nuevo( numerador * otro.numerador ,  denominador * otro.denominador);
    return nuevo;
 }
       
 Racional Racional::operator/(const Racional & otro){
-   Racional nuevo (this->num*otro.den, this->den*otro.num); 
+   Racional nuevo (this->numerador*otro.denominador, this->denominador*otro.numerador); 
    return nuevo;
-}
-
-Racional & Racional::operator=(int entero){
-   _init(entero,1);
-   return *this;
-}
-// PreIncremento ++X
-Racional & Racional::operator++(){
-    this-> num = this->den + this->num;
-    return *this;
- }
-
-// x++; // posincremento, note el int que no se usa como parámetro
-Racional Racional::operator++(int noSeUsa){
-  Racional viejo(this->num, this->den);
-  ++(*this);
-  return viejo;
-}
-
-Racional & Racional::operator+=(const Racional& otroRacional){
-   *this = *this + otroRacional;
-   return *this;
-}
-      
-Racional & Racional::operator*=(const Racional& otroRacional){
-   *this = *this * otroRacional;
-   return *this;
 }
