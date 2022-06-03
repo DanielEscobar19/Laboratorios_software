@@ -2,10 +2,14 @@
 #define _OPERANDO
 
 #include <string>
-#include<iostream>
+#include <map>
+#include <iostream>
 using namespace std;
 
 class Operando {
+
+	private:
+		map<string, Operando&> variables;
 
    public:
 	  // Métodos usados por los friend para hacer entrada salida
@@ -16,6 +20,9 @@ class Operando {
 	  virtual Operando& operator*(Operando&) = 0;
 	  virtual Operando& operator/(Operando&) = 0;
 	  string evaluarPosfijo(string operation);
+
+		void setVar(string, Operando&);
+		Operando& getVar(string key);
 
 };
 

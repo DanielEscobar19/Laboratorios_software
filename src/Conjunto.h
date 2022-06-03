@@ -14,7 +14,7 @@ class Conjunto : public Operando{
 
 	public:
 		Conjunto();
-		Conjunto(double d);
+		Conjunto(set<int> d);
 		~Conjunto();
 		string toString();
 		Conjunto& operator+(Operando &);
