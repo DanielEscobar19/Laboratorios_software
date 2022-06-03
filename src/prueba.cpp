@@ -14,9 +14,6 @@ bool isOperator(string symbol) {
 
 Operando& operar(Operando& operando1, Operando& operando2, char oper) {
   switch (oper) {
-  case '+':
-    return operando1 + operando2;
-    break;
   case '-':
     return operando1 - operando2;
     break;
@@ -27,8 +24,7 @@ Operando& operar(Operando& operando1, Operando& operando2, char oper) {
     return operando1 / operando2;
     break;
   default:
-    static Doble op(0.0);
-    return op;
+    return operando1 + operando2;
     break;
   }
 }
