@@ -50,9 +50,7 @@ Racional::Racional(int numerador, int denominador){
    _init(numerador,denominador);
 }
 
-Racional::~Racional(){
-   delete this;
-}
+Racional::~Racional(){ }
 
 Racional& Racional::operator+(Operando& otro) {
    Racional * racional = dynamic_cast<Racional*>(&otro);

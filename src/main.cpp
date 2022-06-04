@@ -80,7 +80,6 @@ void run() {
    
    resultado = general.evaluarPosfijo("set1 set2 * set3 / set4 + set5 -");
    cout << "Resultado final: " << resultado << endl;
-   cout << "\n   | End |" << endl;
    
 }
 
@@ -88,6 +87,8 @@ int main(){
    cout << "\n    | Start |" << endl;
 
    run();
+
+   cout << "\n   | End |" << endl;
 
    return 0;
 }
