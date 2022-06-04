@@ -7,14 +7,31 @@
 string Operando::evaluarPosfijo(string operation) {
   istringstream operacion(operation);
   cout << "oper: " << operacion.str() << endl;
-  
+    
+  stack<Operando*> pila;
   string symbol = "";
   while(!operacion.eof()) {
     operacion >> symbol;
-    // cout << "n: " << n << endl;
+    if (isOperator(symbol)) {
+      cout << "Calculando " << symbol << " ";
 
+      Operando& op1 = *pila.top();
+      pila.pop();
+      Operando& op2 = *pila.top();
+      pila.pop();
+
+      Operando& result = operar(op2, op1, symbol[0]);
+      pila.push(&result);
+    } 
+    else {
+      pila.push(&variables.at(symbol));
+    }
+    printStack(pila);
   }
-  return "";
+  
+  string resultado = (pila.top())->toString();
+  pila.pop();
+  return resultado;
 }
 
 void Operando::setVar(string key, Operando& operando) {
@@ -24,4 +41,37 @@ void Operando::setVar(string key, Operando& operando) {
 
 Operando& Operando::getVar(string key) {
   return this->variables.at(key);
+}
+
+Operando& Operando::operar(Operando& operando1, Operando& operando2, char oper) {
+  switch (oper) {
+  case '-':
+    return operando1 - operando2;
+    break;
+  case '*':
+    return operando1 * operando2;
+    break;
+  case '/':
+    return operando1 / operando2;
+    break;
+  default:
+    return operando1 + operando2;
+    break;
+  }
+}
+
+bool Operando::isOperator(string symbol) {
+  return (symbol == "+" || symbol == "-" || symbol == "/" || symbol == "*");
+}
+
+void Operando::printStack(stack<Operando*> pila) {
+  cout << "Pila: ";
+  // como es por copia, no le afecta el pop
+  while( !pila.empty() )
+  {
+    Operando& operando = *pila.top();
+    pila.pop();
+    cout << operando.toString() << "  ";
+  }
+  cout << "\n"<< endl;
 }

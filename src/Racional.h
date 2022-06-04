@@ -17,6 +17,7 @@ class Racional : public Operando{
 
    public:
       Racional(int,int);
+      ~Racional();
       string toString();
 
       Racional& operator+(Operando&);

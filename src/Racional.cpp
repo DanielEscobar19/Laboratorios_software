@@ -50,26 +50,30 @@ Racional::Racional(int numerador, int denominador){
    _init(numerador,denominador);
 }
 
+Racional::~Racional(){
+   delete this;
+}
+
 Racional& Racional::operator+(Operando& otro) {
    Racional * racional = dynamic_cast<Racional*>(&otro);
-   static Racional result(this->numerador * racional->denominador + this->denominador * racional->numerador, this->denominador * racional->denominador);
-   return result;
+   Racional * result = new Racional(this->numerador * racional->denominador + this->denominador * racional->numerador, this->denominador * racional->denominador);
+   return *result;
 }
 
 Racional& Racional::operator-(Operando& otro){	
    Racional * racional = dynamic_cast<Racional*>(&otro);
-   static Racional result(numerador * racional->denominador - denominador * racional->numerador   , denominador * racional->denominador);
-   return result;
+   Racional * result = new Racional(numerador * racional->denominador - denominador * racional->numerador   , denominador * racional->denominador);
+   return *result;
 }
 
 Racional& Racional::operator*(Operando& otro){
    Racional * racional = dynamic_cast<Racional*>(&otro);
-   static Racional result(numerador * racional->numerador ,  denominador * racional->denominador);
-   return result;
+   Racional * result = new Racional(numerador * racional->numerador ,  denominador * racional->denominador);
+   return *result;
 }
       
 Racional& Racional::operator/(Operando& otro){
    Racional * racional = dynamic_cast<Racional*>(&otro);
-   static Racional result(this->numerador*racional->denominador, this->denominador*racional->numerador); 
-   return result;
+   Racional * result = new Racional(this->numerador*racional->denominador, this->denominador*racional->numerador); 
+   return *result;
 }
