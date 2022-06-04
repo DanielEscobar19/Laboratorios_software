@@ -13,26 +13,26 @@ string Doble::toString() {
 
 Doble& Doble::operator+(Operando& otro ) {
   Doble * doble = dynamic_cast<Doble*>(&otro);
-  static Doble result(this->valor + doble->valor);
-  return result;
+  Doble * result = new Doble(this->valor + doble->valor);
+  return *result;
 
 }
 
 Doble& Doble::operator-(Operando& otro ) {
   Doble * doble = dynamic_cast<Doble*>(&otro);
-  static Doble result(this->valor - doble->valor);
-  return result;
+  Doble * result = new Doble(this->valor - doble->valor);
+  return *result;
 }
 
 Doble& Doble::operator*(Operando& otro) {
   Doble * doble = dynamic_cast<Doble*>(&otro);
-  static Doble result(this->valor * doble->valor);
-  return result;
+  Doble * result = new Doble(this->valor * doble->valor);
+  return * result;
 }
 
 Doble& Doble::operator/(Operando& otro) {
   Doble * doble = dynamic_cast<Doble*>(&otro);
-  static Doble result(this->valor / doble->valor);
-  return result;
+  Doble * result = new Doble(this->valor / doble->valor);
+  return * result;
 }
 
