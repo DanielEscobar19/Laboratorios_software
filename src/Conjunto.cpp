@@ -10,9 +10,11 @@ Conjunto::~Conjunto() { }
 string Conjunto::toString() {
   string temp = "[";
   set<int>::iterator it = valor.begin();
-  temp += to_string(*it++);
-  for ( ; it!=valor.end(); ++it){
-	temp += ", " + to_string(*it);
+  if(it != valor.end()){
+	temp += to_string(*it++);
+	for ( ; it!=valor.end(); ++it){
+		temp += ", " + to_string(*it);
+	}
   }
   temp += "]";
   return temp;
