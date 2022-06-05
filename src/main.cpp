@@ -13,11 +13,9 @@ void probarOperando(Operando& x, Operando& y) {
    cout << "x: " << x.toString() << " | y: " << y.toString() << endl;
    cout << "Operando sobre (x) y (y)" << endl;
    Operando& suma = x + y;
-   Operando&  resta = x - y;
-   Operando&  division = x / y;
-   cout << "division bro: " << division.toString() << endl;
-   Operando&  multiplicacion = x * y;
-   cout << "multi bro: " << multiplicacion.toString() << endl;
+   Operando& resta = x - y;
+   Operando& multiplicacion = x * y;
+   Operando& division = x / y;
    cout << "Suma: " << suma.toString() << "\nResta: " << resta.toString()  << "\nMultiplicacion: " << multiplicacion.toString()  << "\nDivision: " << division.toString()  << endl;
    cout << "---------------------------------------" << endl;
 }
@@ -51,7 +49,7 @@ void run() {
    Conjunto set4{ set<int> { 2, 4 } };
    Conjunto set5{ set<int> { 7, 5 } };
 
-   cout << "Evaluando posFijo" << endl;
+   cout << "\nEvaluando posFijo" << endl;
    Doble general;
    // llena el mapa
    general.setVar("d1",d1);

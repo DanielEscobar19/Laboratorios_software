@@ -6,7 +6,7 @@
 // método plantilla
 string Operando::evaluarPosfijo(string operation) {
   istringstream operacion(operation);
-  cout << "oper: " << operacion.str() << endl;
+  cout << "Operacion: " << operacion.str() << "\n" << endl;
     
   stack<Operando*> pila;
   string symbol = "";
